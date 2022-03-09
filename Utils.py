@@ -16,3 +16,7 @@ def tanh(x):
     except Exception as e:
         print(e)
     return 3.432/(1+math.pow(math.e, -0.667*x)) - 1.716
+
+
+
+
