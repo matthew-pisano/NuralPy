@@ -50,7 +50,7 @@ class NeuralNet:
         saveStr = ""
         for layer in self.network:
             for neuron in layer:
-                for weight in neuron.weights.values():
+                for weight in neuron.population.values():
                     saveStr += str(weight[0])+","
         with open(outFile, "w") as file:
             file.write(saveStr)
@@ -62,6 +62,6 @@ class NeuralNet:
         index = 0
         for layer in self.network:
             for neuron in layer:
-                for weight in neuron.weights.values():
+                for weight in neuron.population.values():
                     weight[0] = float(saveStr[index])
                     index += 1
