@@ -34,11 +34,11 @@ if __name__ == "__main__":
     trainTest = True, True
     trainSet = ([], [])
     testSet = ([], [])
-    testLim = 100
+    testLim = 900
     trainLim = testLim * .8
     tests = 0
     # net = NeuralNet([784, 128, 128, 10], Backpropogator())
-    net = NeuralNet([784, 128, 128, 10], Genetic(50, 0.7, 0.02))
+    net = NeuralNet([784, 128, 128, 10], Genetic(50, 0.4, 0.1))
     """if saveResume and os.path.exists("weights.csv"):
         net.loadWeights("weights.csv")"""
     while tests < testLim:
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     tests = 0
     if trainTest[0]:
         t = time.time()
-        out = net.train(np.array(trainSet[0]), np.array(trainSet[1]), epochs=200, learningRate=0.5, displayUpdate=1)
+        out = net.train(np.array(trainSet[0]), np.array(trainSet[1]), epochs=10, learningRate=0.5, displayUpdate=1, verbosity=1)
         print("Trained after " + str(time.time() - t) + "s")
         print("================================\n\n==============================")
         net.saveWeights("save.w")
@@ -73,5 +73,5 @@ if __name__ == "__main__":
         img = cv2.imread("zero.jpg", cv2.IMREAD_GRAYSCALE)
         newImg = normalize(flatten(img))
         sampleSet = np.c_[np.array([newImg]), np.ones((np.array([newImg]).shape[0]))]
-        loss = net.loss([sampleSet, np.array([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]])], verbosity=1)
+        loss = net.loss([sampleSet, np.array([[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]])], verbosity=1)
         print("Loss: " + str(loss[0]) + ", Correct: " + str(loss[1] * 100) + "%")

@@ -9,7 +9,7 @@ import Utils
 
 class NeuralNet:
 	def __init__(self, topography, trainer):
-		self.population = []
+		self.population = {"pop": []}
 		self.topography = topography
 		self.trainer = trainer
 		self.trainer.prime(self.population, self.topography, self.loss)
@@ -21,19 +21,23 @@ class NeuralNet:
 		# Change into 2D array
 		output = np.atleast_2d(sample)
 		try:
-			for layer in range(0, len(self.population[memberId])):
-				output = Utils.sigmoid(np.dot(output, self.population[memberId][layer]))
+			for layer in range(0, len(self.population["pop"][memberId])):
+				output = Utils.sigmoid(np.dot(output, self.population["pop"][memberId][layer]))
 		except Exception as e:
 			print("ERROE: "+str(e))
 		return output
 
-	def loss(self, samples, memberId=0, verbosity=0):
+	def loss(self, samples, memberId=-1, verbosity=0):
+		if memberId == -1:
+			self.trainer.setAllFitness(samples)
+			memberId = self.trainer.selection(1)[0]
 		# Change into 2D array
 		samples[1] = np.atleast_2d(samples[1])
 		output = self.test(samples[0], memberId)
 		outCopy = output
-		correct = 0
+		correct = -1
 		if verbosity > 0:
+			correct = 0
 			for i in range(0, len(output)):
 				outChoice = np.where(outCopy[i] == max(outCopy[i]))[0][0]
 				correctChoice = np.where(samples[1][i] == max(samples[1][i]))[0][0]
@@ -45,14 +49,15 @@ class NeuralNet:
 					print("Correct choice: "+str(correctChoice))
 				correct += 1 if outChoice == correctChoice else 0
 		# Calculate sum of squared errors for loss function
-		return 0.5 * np.sum((output - samples[1]) ** 2), correct / len(output)
+		loss = 0.5 * np.sum((output - samples[1]) ** 2)
+		return loss, correct / len(output)
 
 	def saveWeights(self, fileName):
 		flatWeights = []
-		for memberId in range(0, len(self.population)):
-			for layer in range(0, len(self.population[memberId])):
-				for weight in range(0, len(self.population[memberId][layer])):
-					flatWeights.append(list(self.population[memberId][layer][weight]))
+		for memberId in range(0, len(self.population["pop"])):
+			for layer in range(0, len(self.population["pop"][memberId])):
+				for weight in range(0, len(self.population["pop"][memberId][layer])):
+					flatWeights.append(list(self.population["pop"][memberId][layer][weight]))
 
 		with open(fileName, "w") as file:
 			file.write(str(flatWeights))
@@ -60,10 +65,10 @@ class NeuralNet:
 	def loadWeights(self, fileName):
 		with open(fileName, "r") as file:
 			flatWeights = json.loads(file.read())
-		for memberId in range(0, len(self.population)):
-			for layer in range(0, len(self.population[memberId])):
-				for weight in range(0, len(self.population[memberId][layer])):
-					self.population[memberId][layer][weight] = np.array(flatWeights.pop(0))
+		for memberId in range(0, len(self.population["pop"])):
+			for layer in range(0, len(self.population["pop"][memberId])):
+				for weight in range(0, len(self.population["pop"][memberId][layer])):
+					self.population["pop"][memberId][layer][weight] = np.array(flatWeights.pop(0))
 
 	def __repr__(self):
 		return "NeuralNetwork ("+str(self.topography)+")"

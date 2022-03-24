@@ -11,11 +11,38 @@ class Trainer:
         self.population = None
         self.loss = None
         self.topography = None
+        self.fittneses = [0]
+        self.popSize = 1
 
     def prime(self, population, topography, loss):
         self.population = population
         self.loss = loss
         self.topography = topography
+
+    def selection(self, selectCount):
+        if len(self.population["pop"]) == 1:
+            return [0]
+        selectedIds = []
+        totalFitness = sum(self.fittneses)
+        # print(self.fittneses)
+        while len(selectedIds) < selectCount:
+            randPlace = random.random()
+            rouletteSum = 0
+            current = -1
+            while randPlace > rouletteSum:
+                current += 1
+                rouletteSum += self.fittneses[current]/totalFitness
+            if current not in selectedIds:
+                selectedIds.append(current)
+        # print(selectedIds)
+        return selectedIds
+
+    def getFitness(self, memberId, samples):
+        return 1 / self.loss(samples, memberId)[0]
+
+    def setAllFitness(self, samples):
+        for i in range(0, self.popSize):
+            self.fittneses[i] = self.getFitness(i, samples)
 
     def train(self, sampleList, classList, epochs=1000, learningRate=0.1, displayUpdate=10, verbosity=0):
         # Append column to 1's to allow for training thresholds
@@ -27,25 +54,26 @@ class Trainer:
             for (sample, classOf) in zip(sampleList, classList):
                 self.epochTrain(sample, classOf, learningRate)
                 sampleNum += 1
-                print("Sample "+str(sampleNum)+" completed after "+str(time.time()-timeAt)+"s")
+                # print("Sample "+str(sampleNum)+" completed after "+str(time.time()-timeAt)+"s")
                 timeAt = time.time()
             # check to see if we should display a training update
             if epoch == 0 or (epoch + 1) % displayUpdate == 0:
                 totalLoss = [0, 0]
-                bestLoss = [0, 0]
+                bestLoss = [float("infinity"), 0]
                 mostCorrect = [0, 0]
-                for i in range(0, len(self.population)):
-                    loss = self.loss([sampleList, classList], verbosity=verbosity)
+                for i in range(0, len(self.population["pop"])):
+                    loss = self.loss([sampleList, classList], i, verbosity)
                     totalLoss[0] += loss[0]
                     totalLoss[1] += loss[1]
-                    if loss[0] > bestLoss[0]:
+                    if loss[0] < bestLoss[0]:
                         bestLoss = loss
                     if loss[1] > mostCorrect[1]:
                         mostCorrect = loss
-                totalLoss[0] /= len(self.population)
-                print("Epoch: " + str(epoch) + ", Loss: " + str(totalLoss[0]) + (
+                totalLoss[0] /= len(self.population["pop"])
+                totalLoss[1] /= len(self.population["pop"])
+                print("Generation: " + str(epoch) + ", Average Loss: " + str(totalLoss[0]) + (
                             ", Correct: " + str(totalLoss[1] * 100) + "%" if verbosity > 0 else ""), end="")
-                if len(self.population) > 1:
+                if len(self.population["pop"]) > 1:
                     print(", Best loss: "+str(bestLoss)+", most correct: "+str(mostCorrect))
                 else:
                     print()
@@ -54,14 +82,14 @@ class Trainer:
         pass
 
     def initMember(self):
-        self.population.append([])
+        self.population["pop"].append([])
         # Initialize weights and thresholds for all but last layer
         for i in range(0, len(self.topography) - 2):
             weight = np.random.randn(self.topography[i] + 1, self.topography[i + 1] + 1)
-            self.population[-1].append(weight / np.sqrt(self.topography[i]))
+            self.population["pop"][-1].append(weight / np.sqrt(self.topography[i]))
         # Initialize weights and thresholds for output layer
         weight = np.random.randn(self.topography[-2] + 1, self.topography[-1])
-        self.population[-1].append(weight / np.sqrt(self.topography[-2]))
+        self.population["pop"][-1].append(weight / np.sqrt(self.topography[-2]))
 
 
 class Backpropogator(Trainer):
@@ -73,21 +101,20 @@ class Backpropogator(Trainer):
         # Change into 2D array
         activations = [np.atleast_2d(sample)]
         # Gather activations for each layer
-        for layer in range(0, len(self.population[0])):
-            activation = activations[layer].dot(self.population[0][layer])
+        for layer in range(0, len(self.population["pop"][0])):
+            activation = activations[layer].dot(self.population["pop"][0][layer])
             activations.append(Utils.sigmoid(activation))
         # Calculate error of output layer
         error = activations[-1] - classOf
         deltas = [error * Utils.sigmoidDx(activations[-1])]
 
         for layer in range(len(activations) - 2, 0, -1):
-            delta = deltas[-1].dot(self.population[0][layer].transpose())
+            delta = deltas[-1].dot(self.population["pop"][0][layer].transpose())
             delta = delta * Utils.sigmoidDx(activations[layer])
             deltas.append(delta)
         # Update weights
-        for layer in range(0, len(self.population[0])):
-            self.population[0][layer] += -learningRate * activations[layer].transpose().dot(
-                deltas[-(layer + 1)])
+        for layer in range(0, len(self.population["pop"][0])):
+            self.population["pop"][0][layer] += -learningRate * activations[layer].transpose().dot(deltas[-(layer + 1)])
 
 
 class Genetic(Trainer):
@@ -97,60 +124,48 @@ class Genetic(Trainer):
         self.crossoverRate = crossoverRate
         self.mutationRate = mutationRate
         self.genomeLength = 0
-        self.fittneses = [0]*self.popSize
 
     def prime(self, population, topography, loss):
         super().prime(population, topography, loss)
         self.genomeLength = sum(topography) - topography[-1]
+        self.fittneses = [0] * self.popSize
         for i in range(0, self.popSize):
             super().initMember()
 
     def epochTrain(self, sample, classOf, learningRate=0.1):
         childPopulation = []
-        for i in range(0, self.popSize):
-            self.fittneses[i] = self.getFittness(i, [sample, classOf])
+        self.setAllFitness([sample, classOf])
         while len(childPopulation) < self.popSize:
             parentIds = self.selection(2)
             children = self.crossover(parentIds)
             childPopulation.append(self.mutation(children[0]))
             childPopulation.append(self.mutation(children[1]))
-        self.population = childPopulation
-
-    def selection(self, selectCount, findBest=True):
-        selectedIds = []
-        current = -1
-        rouletteSum = 0
-        totalFitness = sum(self.fittneses)
-        for i in range(0, selectCount):
-            randPlace = random.random()
-            while randPlace > rouletteSum:
-                current += 1
-                rouletteSum += (self.fittneses[current]/totalFitness) if findBest \
-                    else (1-self.fittneses[current]/totalFitness)
-            selectedIds.append(current)
-        return selectedIds
+        self.population["pop"] = childPopulation
 
     def crossover(self, parentIds):
         crossoverPoint = math.floor(self.genomeLength / self.crossoverRate * random.random())
         children = [[], []]
-        for layer in self.population[parentIds[0]]:
+        for layer in self.population["pop"][parentIds[0]]:
             zeroes = np.zeros(layer.shape)
             children[0].append(zeroes)
             children[1].append(zeroes)
-        parentOrder = [parentIds[0], parentIds[1]]
         i = 0
-        j = 0
-        index = 0
+        while children[0][i].shape[0] < crossoverPoint:
+            children[0][i] = self.population["pop"][parentIds[0]][i]
+            children[1][i] = self.population["pop"][parentIds[1]][i]
+            crossoverPoint -= children[0][i].shape[0]
+            i += 1
+            if i >= len(children[0]):
+                return children
+        children[0][i][:crossoverPoint] = self.population["pop"][parentIds[0]][i][:crossoverPoint]
+        children[1][i][:crossoverPoint] = self.population["pop"][parentIds[1]][i][:crossoverPoint]
+        children[0][i][crossoverPoint:] = self.population["pop"][parentIds[1]][i][crossoverPoint:]
+        children[1][i][crossoverPoint:] = self.population["pop"][parentIds[0]][i][crossoverPoint:]
+        i += 1
         while i < len(children[0]):
-            children[0][i][j] = self.population[parentOrder[0]][i][j]
-            children[1][i][j] = self.population[parentOrder[1]][i][j]
-            j += 1
-            index += 1
-            if index == crossoverPoint:
-                parentOrder = [parentIds[1], parentIds[0]]
-            if j == children[0][i].shape[0]:
-                j = 0
-                i += 1
+            children[0][i] = self.population["pop"][parentIds[1]][i]
+            children[1][i] = self.population["pop"][parentIds[0]][i]
+            i += 1
         return children
 
     def mutation(self, child):
@@ -163,23 +178,3 @@ class Genetic(Trainer):
             i += 1
         child[i][mutationPoint] = np.random.randn(child[i].shape[1])
         return child
-
-    def getFittness(self, memberId, samples):
-        self.fittneses[memberId] = 1 / self.loss(samples, memberId)[0]
-        return self.fittneses[memberId]
-
-    """flat = [self.population[parentIds[0]].ravel(), self.population[parentIds[1]].ravel()]
-            parentOrder = [0, 1]
-            i = 0
-            j = 0
-            index = 0
-            while index < flat[0].size:
-                children[0][i][j] = flat[parentOrder[0]][index]
-                children[1][i][j] = flat[parentOrder[1]][index]
-                j += 1
-                index += 1
-                if index == crossoverPoint:
-                    parentOrder = [1, 0]
-                if j == children[0][i].size:
-                    j = 0
-                    i += 1"""
