@@ -1,4 +1,6 @@
 # import the necessary packages
+import time
+
 import numpy as np
 import json
 
@@ -14,12 +16,13 @@ class NeuralNet:
 		self.trainer = trainer
 		self.trainer.prime(self.population, self.topography, self.loss)
 
-	def train(self, sampleList, classList, epochs=1000, learningRate=0.1, displayUpdate=10, verbosity=0):
-		self.trainer.train(sampleList, classList, epochs, learningRate, displayUpdate, verbosity)
+	def train(self, sampleList, classList, epochs=1000, displayUpdate=10, verbosity=0):
+		self.trainer.train(sampleList, classList, epochs, displayUpdate, verbosity)
 
 	def test(self, sample, memberId):
 		# Change into 2D array
-		output = np.atleast_2d(sample)
+		# output = np.atleast_2d(sample)
+		output = sample
 		try:
 			for layer in range(0, len(self.population["pop"][memberId])):
 				output = Utils.sigmoid(np.dot(output, self.population["pop"][memberId][layer]))
@@ -31,8 +34,9 @@ class NeuralNet:
 		if memberId == -1:
 			self.trainer.setAllFitness(samples)
 			memberId = self.trainer.selection(1)[0]
+		# timeAt = time.time()
 		# Change into 2D array
-		samples[1] = np.atleast_2d(samples[1])
+		# samples[1] = np.atleast_2d(samples[1])
 		output = self.test(samples[0], memberId)
 		outCopy = output
 		correct = -1
@@ -41,15 +45,20 @@ class NeuralNet:
 			for i in range(0, len(output)):
 				outChoice = np.where(outCopy[i] == max(outCopy[i]))[0][0]
 				correctChoice = np.where(samples[1][i] == max(samples[1][i]))[0][0]
+				correctGuess = 1 if outChoice == correctChoice else 0
 				if verbosity > 1:
-					for j in range(0, 5):
+					for j in range(0, 5 if outCopy[i].shape[0] > 5 else outCopy[i].shape[0]):
 						choiceCopy = np.where(outCopy[i] == np.amax(outCopy[i]))[0][0]
 						print("Output choice: "+str(choiceCopy)+", Confidence: "+str(outCopy[i][choiceCopy]*100)+"%")
 						outCopy[i][choiceCopy] = 0
-					print("Correct choice: "+str(correctChoice))
-				correct += 1 if outChoice == correctChoice else 0
+					print(("\033[32m[=======CORRECT=======]\033[38m" if correctGuess == 1
+						else "\033[93m[=======INCORRECT=======]\033[38m") + ", Correct choice: "+str(correctChoice))
+				correct += correctGuess
+		# print("Timeat: "+str(time.time()-timeAt))
+		# timeAt = time.time()
 		# Calculate sum of squared errors for loss function
-		loss = 0.5 * np.sum((output - samples[1]) ** 2)
+		loss = 0.5 * np.sum((output - samples[1]) ** 2) / samples[1].shape[0]
+		#print("Timeat: " + str(time.time() - timeAt))
 		return loss, correct / len(output)
 
 	def saveWeights(self, fileName):

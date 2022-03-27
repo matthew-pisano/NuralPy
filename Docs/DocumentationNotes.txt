@@ -1,0 +1,16 @@
+Shape of hidden layers
+
+There is an article that proposes a method to find out how many neurons should be in a hidden layer. According to Sheela and Deepa (2013) number of neurons can be calculated in a hidden layer as (4*n^2+3)/(n^2-8) where n is the number of input.
+On the other hand, number of hidden layer can be 2 in little data set. (0,10) in the large data set that can be adjusted according to the accuracy of MSE etc.
+The study is Sheela, K. G., & Deepa, S. N. (2013). Review on methods to fix number of hidden neurons in neural networks. Mathematical Problems in Engineering, 2013.
+
+
+https://www.youtube.com/watch?v=bqBRET7tbiQ
+
+Also add credits for articles for max values of cholesterol, bmi, etc. values from csv
+
+
+Add documentation on how matrices turn into network as opposed to explicit nodes as in first test
+
+
+Graphs for loss curves

@@ -4,15 +4,6 @@ import Utils
 
 
 class Neuron:
-    """private final int id
-    private final HashMap<Integer, Double[]> weights
-    private ArrayList<Neuron> connections
-    private double threshold
-    private final int prevLayerNodes
-    private int signalsGotten
-    private double sum
-    private double errorGradient
-    private int activationFunction"""
 
     def __init__(self, id, prevLayer):
         self.threshold = 0

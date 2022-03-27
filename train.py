@@ -44,15 +44,17 @@ class Trainer:
         for i in range(0, self.popSize):
             self.fittneses[i] = self.getFitness(i, samples)
 
-    def train(self, sampleList, classList, epochs=1000, learningRate=0.1, displayUpdate=10, verbosity=0):
+    def train(self, sampleList, classList, epochs=1000, displayUpdate=10, verbosity=0):
         # Append column to 1's to allow for training thresholds
         sampleList = np.c_[sampleList, np.ones((sampleList.shape[0]))]
+        sampleList = np.atleast_2d(sampleList)
+        classList = np.atleast_2d(classList)
         for epoch in range(0, epochs):
             # Train on each sample
             sampleNum = 0
             timeAt = time.time()
             for (sample, classOf) in zip(sampleList, classList):
-                self.epochTrain(sample, classOf, learningRate)
+                self.epochTrain(sample, classOf)
                 sampleNum += 1
                 # print("Sample "+str(sampleNum)+" completed after "+str(time.time()-timeAt)+"s")
                 timeAt = time.time()
@@ -71,14 +73,14 @@ class Trainer:
                         mostCorrect = loss
                 totalLoss[0] /= len(self.population["pop"])
                 totalLoss[1] /= len(self.population["pop"])
-                print("Generation: " + str(epoch) + ", Average Loss: " + str(totalLoss[0]) + (
+                print("Epoch: " + str(epoch) + ", Average Loss: " + str(totalLoss[0]) + (
                             ", Correct: " + str(totalLoss[1] * 100) + "%" if verbosity > 0 else ""), end="")
                 if len(self.population["pop"]) > 1:
                     print(", Best loss: "+str(bestLoss)+", most correct: "+str(mostCorrect))
                 else:
                     print()
 
-    def epochTrain(self, sample, classOf, learningRate=0.1):
+    def epochTrain(self, sample, classOf):
         pass
 
     def initMember(self):
@@ -93,13 +95,18 @@ class Trainer:
 
 
 class Backpropogator(Trainer):
+    def __init__(self, learningRate):
+        super().__init__()
+        self.learningRate = learningRate
+
     def prime(self, population, topography, loss):
         super().prime(population, topography, loss)
         super().initMember()
 
-    def epochTrain(self, sample, classOf, learningRate=0.1):
+    def epochTrain(self, sample, classOf):
         # Change into 2D array
-        activations = [np.atleast_2d(sample)]
+        # activations = [np.atleast_2d(sample)]
+        activations = [np.asarray([sample])]
         # Gather activations for each layer
         for layer in range(0, len(self.population["pop"][0])):
             activation = activations[layer].dot(self.population["pop"][0][layer])
@@ -114,7 +121,7 @@ class Backpropogator(Trainer):
             deltas.append(delta)
         # Update weights
         for layer in range(0, len(self.population["pop"][0])):
-            self.population["pop"][0][layer] += -learningRate * activations[layer].transpose().dot(deltas[-(layer + 1)])
+            self.population["pop"][0][layer] += -self.learningRate * activations[layer].transpose().dot(deltas[-(layer + 1)])
 
 
 class Genetic(Trainer):
@@ -132,11 +139,12 @@ class Genetic(Trainer):
         for i in range(0, self.popSize):
             super().initMember()
 
-    def epochTrain(self, sample, classOf, learningRate=0.1):
+    def epochTrain(self, sample, classOf):
         childPopulation = []
         self.setAllFitness([sample, classOf])
         while len(childPopulation) < self.popSize:
             parentIds = self.selection(2)
+            parentFits = [self.fittneses[parentIds[0]], self.fittneses[parentIds[1]]]
             children = self.crossover(parentIds)
             childPopulation.append(self.mutation(children[0]))
             childPopulation.append(self.mutation(children[1]))
