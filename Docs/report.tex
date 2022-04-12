@@ -106,7 +106,10 @@ method for Diabetes Diagnosis Prediction}}
         or "good" cholesterol, the ratio of HDL cholesterol to total cholesterol, age, gender, height, weight, body mass index (BMI),
         systolic blood pressure, and diastolic blood pressure.  The entries in the dataset are categorized into two groups, those that
         were diagnosed with diabestes and those who were not.  For this experiment, the height and weight parameters were exclused
-        as they were redundant with BMI %Maybe exclude cholesterol ratio too as redundant
+        as they were redundant with BMI.  The cholesterol ratio parameter was also omitted for redundancy to the other cholesterol parameters.
+
+        Before usage in training, the data set was first normalized.  When a data set is normalized, all of its values are scaled
+        between zero and one.  Zero is set as the lowest value a parameter can take
 
         %TODO mention normalization as preparation%
 \section{Results and Discussion}
