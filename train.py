@@ -1,6 +1,6 @@
 import random
 import time
-
+import matplotlib.pyplot as plt
 import numpy as np
 import math
 import Utils
@@ -44,7 +44,10 @@ class Trainer:
         for i in range(0, self.popSize):
             self.fittneses[i] = self.getFitness(i, samples)
 
-    def train(self, sampleList, classList, epochs=1000, displayUpdate=10, verbosity=0):
+    def train(self, sampleList, classList, epochs=100, displayUpdate=10, verbosity=0):
+        epochLosses = []
+        epochAccuracy = []
+        epochTimes = []
         # Append column to 1's to allow for training thresholds
         sampleList = np.c_[sampleList, np.ones((sampleList.shape[0]))]
         sampleList = np.atleast_2d(sampleList)
@@ -73,12 +76,18 @@ class Trainer:
                         mostCorrect = loss
                 totalLoss[0] /= len(self.population["pop"])
                 totalLoss[1] /= len(self.population["pop"])
+                epochLosses.append(totalLoss[0])
+                epochAccuracy.append(totalLoss[1])
+                epochTimes.append(epoch)
                 print("Epoch: " + str(epoch) + ", Average Loss: " + str(totalLoss[0]) + (
                             ", Correct: " + str(totalLoss[1] * 100) + "%" if verbosity > 0 else ""), end="")
                 if len(self.population["pop"]) > 1:
                     print(", Best loss: "+str(bestLoss)+", most correct: "+str(mostCorrect))
                 else:
                     print()
+
+        Utils.plot(epochTimes, epochLosses, "Loss", "Genetic Algorithm Loss Over Epochs")
+        Utils.plot(epochTimes, epochAccuracy, "Accuracy", "Genetic Algorithm Accuracy Over Epochs")
 
     def epochTrain(self, sample, classOf):
         pass

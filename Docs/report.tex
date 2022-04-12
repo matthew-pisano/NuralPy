@@ -6,7 +6,8 @@ method for Diabetes Diagnosis Prediction}}
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\graphicspath{ {./images/} }
+\nocite{*}
+\graphicspath{{./images/}}
 \begin{document}
 \maketitle
 
@@ -38,8 +39,9 @@ method for Diabetes Diagnosis Prediction}}
         \begin{figure}[h]
             \includegraphics[scale=.3]{nnDiagram.png}
             \centering
-            \caption{Example of a Neural Network}
+            \caption{Example of a Neural Network \cite{nnDiagram}}
         \end{figure}
+
         Output from these neurons is produced by taking the sum of all its inputs (\(I_i\)), each multiplied by a weight (\(W_i\)), 
         and subtracting the neuron's bias (\(b\)).  The result of this summation is then passed into the activation function to produce 
         the final output of the neuron. The activation function scales the summation to be between zero and one.  The sigmoid (\(\sigma\))function
@@ -84,8 +86,9 @@ method for Diabetes Diagnosis Prediction}}
         \begin{figure}[h]
             \includegraphics[scale=.5]{crossover.png}
             \centering
-            \caption{Illustration of crossover}
+            \caption{Illustration of crossover \cite{crossoverDiagram}}
         \end{figure}
+
         This ensures that there is a good mix between the characteristics of the parents passed down to the children.
 
         Each child may then undergo a mutation, where an individual gene is mutated to a random value.  This serves the
@@ -101,7 +104,7 @@ method for Diabetes Diagnosis Prediction}}
 \section{Experimental Approach}
     \subsection{Data Set and Preparation}
         The data set used for this project is from the Vanderbilt University Department of Biostatics and contains
-        the testing parameters and results of 390 African American participants from central Virginia.
+        the testing parameters and results of 390 African American participants from central Virginia \cite{diabetesData}.
         The parameters of the dataset are comprised of the patient's cholesterol, blood glucode levels, high-density lipoprotein (HDL)
         or "good" cholesterol, the ratio of HDL cholesterol to total cholesterol, age, gender, height, weight, body mass index (BMI),
         systolic blood pressure, and diastolic blood pressure.  The entries in the dataset are categorized into two groups, those that
@@ -109,17 +112,73 @@ method for Diabetes Diagnosis Prediction}}
         as they were redundant with BMI.  The cholesterol ratio parameter was also omitted for redundancy to the other cholesterol parameters.
 
         Before usage in training, the data set was first normalized.  When a data set is normalized, all of its values are scaled
-        between zero and one.  Zero is set as the lowest value a parameter can take
+        between zero and one.  After normalization, the highest value in the data set is scaled near to 1 and the lowest is scaled near to zero.
+        Normalization allows the neural net to only deal with smaller numbers without removing  the scale of the original data.
+        The next step was to then classifiy the data into diebetic and non-diabetic groups and then to split the data into training and
+        testing sets using an 80:20 split.
 
-        %TODO mention normalization as preparation%
+        After pruning unneeded parameters, normalizing the data points, and classifying the data, the data set is ready to be used in the neural network.
+    \subsection{Network Structure and Training}
+        After pruning, redundant parameters, the data set was left with parameters.  The input layer of each layer therefore had 8 nodes in the
+        input layer.  Hidden layers with 5 nodes or under resulted in low computation times, but no hidden layer at all performed the best across the various methods.
+        The ouptut layer has two nodes, representing the confidence that the given participant does or does not have diabetes.
+
+        For training, each one of the three networks was given the same 80\% proportion of the original data set and trained for 150 epochs.
+        The loss function for each network is given by the sum of squared errors for every sample.
+        \begin{equation}\label{sumSquaredErrs}
+            loss = \sum_{i=1}^{n_{samples}} \sum_{j=1}^{n_{outputs}} (output_{ij} - expected_{ij})^2
+        \end{equation}
+        Each trial was given a score for comparrison.  The score is given by the percent of correctly identified diagnoses divided by the time it took for the
+        trial to complete.
+
+        For the backpropogation network, a learning rate (\(\alpha\)) of 0.6 was used.  Across three trials, training over the data set for
+        the 150 epochs, the network trained after 0.75 seconds on average.  The average loss for the testing set was 0.125, correctly predicting 84.2\% of diagnoses.
+        Its overall score was 1.08.
+        \begin{figure}[h]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=.9\linewidth]{backproplosses.png}
+                \caption{Loss value over successive epochs for backpropogation}
+            \end{minipage}\hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=.9\linewidth]{backpropaccuracy.png}
+                \caption{Diagnosis accuracy over successive epochs for backpropogation}
+            \end{minipage}
+        \end{figure}
+
+        The training loss curve for backpropogation follows closely to a curve of \(\frac{1}{x}\).  This signifies a good loss curve with minimal
+        overfitting \cite{goodLoss}.  The loss declines sharply and the accuracy rises rapidly over successive epochs of training.
+        \pagebreak
+
+        For the genetic algorithm, a population size of 6, a crossover rate of 0.5, and a mutation rate of 0.1.  Across three trials, the network
+        took 4.95 seconds.  The avarage loss for the testing set was 0.295, correctly identifying 68.4\% of diagnoses.  Its overall score was 0.138.
+        
+        \begin{figure}[ht]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=.9\linewidth]{geneticlosses.png}
+                \caption{Loss value over successive epochs for the genetic algorithm}
+            \end{minipage}\hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=.9\linewidth]{geneticaccuracy.png}
+                \caption{Diagnosis accuracy over successive epochs for the genetic algorithm}
+            \end{minipage}
+        \end{figure}
+        
+        The training loss curve for the genetic algorithm shows a less pronounced curve, correcponding well with a high
+        learning rate \cite{goodLoss}.  The loss of the algorithm dropped sharply after the training started but leveled out higher than
+        backpropogation did, resulting in a high accuracy, but it did not improve significantly over time.
 \section{Results and Discussion}
 
 \section{Conclusions}
 
-\begin{thebibliography}{100}
+\pagebreak
+\bibliographystyle{plain}
+\bibliography{refs}
     %(Fig. 1) \url{https://www.researchgate.net/figure/Simple-neural-network-diagram_fig1_332158639}
     %(Fig. 2) \url{https://www.geeksforgeeks.org/crossover-in-genetic-algorithm/}
     %Diabetes data set https://hbiostat.org/data/%
-\end{thebibliography}
 
 \end{document}

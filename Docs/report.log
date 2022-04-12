@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.3.26)  27 MAR 2022 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.3.26)  28 MAR 2022 20:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -150,24 +150,24 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count270
@@ -187,7 +187,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 10.
+Package hyperref Info: Link coloring OFF on input line 11.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -197,58 +197,76 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count276
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 12.
+(Font)              <14.4> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
+(Font)              <7> on input line 13.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./images//nnDiagram.png, id=63, 464.73625pt x 352.31625pt>
+<./images//nnDiagram.png, id=67, 464.73625pt x 352.31625pt>
 File: ./images//nnDiagram.png Graphic file (type png)
 <use ./images//nnDiagram.png>
-Package pdftex.def Info: ./images//nnDiagram.png  used on input line 39.
+Package pdftex.def Info: ./images//nnDiagram.png  used on input line 40.
 (pdftex.def)             Requested size: 139.42194pt x 105.69568pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 43.
+(Font)              <12> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 43.
+(Font)              <6> on input line 45.
  [2 <./images//nnDiagram.png>]
-<./images//crossover.png, id=77, 289.08pt x 175.65625pt>
+<./images//crossover.png, id=83, 289.08pt x 175.65625pt>
 File: ./images//crossover.png Graphic file (type png)
 <use ./images//crossover.png>
-Package pdftex.def Info: ./images//crossover.png  used on input line 85.
+Package pdftex.def Info: ./images//crossover.png  used on input line 87.
 (pdftex.def)             Requested size: 144.53964pt x 87.8279pt.
  [3] [4 <./images//crossover.png>]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 123.
-
-[5] (./report.aux)
+<./images//backproplosses.png, id=102, 477.28313pt x 356.0803pt>
+File: ./images//backproplosses.png Graphic file (type png)
+<use ./images//backproplosses.png>
+Package pdftex.def Info: ./images//backproplosses.png  used on input line 140.
+(pdftex.def)             Requested size: 168.47736pt x 125.68947pt.
+<./images//backpropaccuracy.png, id=103, 475.02469pt x 352.31625pt>
+File: ./images//backpropaccuracy.png Graphic file (type png)
+<use ./images//backpropaccuracy.png>
+Package pdftex.def Info: ./images//backpropaccuracy.png  used on input line 145.
+(pdftex.def)             Requested size: 168.47736pt x 124.95755pt.
+ [5] [6 <./images//backproplosses.png (PNG copy)> <./images//backpropaccuracy.png (PNG copy)>]
+<./images//geneticlosses.png, id=117, 473.51906pt x 353.82187pt>
+File: ./images//geneticlosses.png Graphic file (type png)
+<use ./images//geneticlosses.png>
+Package pdftex.def Info: ./images//geneticlosses.png  used on input line 160.
+(pdftex.def)             Requested size: 168.47736pt x 125.88568pt.
+<./images//geneticaccuracy.png, id=118, 475.02469pt x 356.83313pt>
+File: ./images//geneticaccuracy.png Graphic file (type png)
+<use ./images//geneticaccuracy.png>
+Package pdftex.def Info: ./images//geneticaccuracy.png  used on input line 165.
+(pdftex.def)             Requested size: 168.47736pt x 126.55957pt.
+ [7 <./images//geneticlosses.png (PNG copy)> <./images//geneticaccuracy.png (PNG copy)>] (./report.bbl) [8] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 8CAA28F69B18B4F6E9353A6653397955;1897.
+(rerunfilecheck)             Checksum: 3CA9CBEFA32F61F96AE24237A431122F;2114.
  ) 
 Here is how much of TeX's memory you used:
- 8132 strings out of 478276
- 127506 string characters out of 5853013
- 422106 words of memory out of 5000000
- 26241 multiletter control sequences out of 15000+600000
+ 8193 strings out of 478276
+ 128891 string characters out of 5853013
+ 422285 words of memory out of 5000000
+ 26281 multiletter control sequences out of 15000+600000
  474427 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,326b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,63p,326b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (5 pages, 116221 bytes).
+Output written on report.pdf (8 pages, 216197 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1648392139 "/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex" "report.pdf" "report" 1648392140
-  "/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex" 1648392139 8558 5a494b41c8f6d312ecb45463177c1ce1 ""
+["bibtex report"] 1648512639 "report.aux" "report.bbl" "report" 1648512639
+  "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1647844622 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+  "refs.bib" 1648509068 1194 3838651ac45e6432390a08469b46ba7c ""
+  "report.aux" 1648512639 4029 6e5155fe664da2e9feecc2c1fdce61da "pdflatex"
+  (generated)
+  "report.bbl"
+  "report.blg"
+["pdflatex"] 1648512639 "/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex" "report.pdf" "report" 1648512639
+  "/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex" 1648512637 12653 a847d2988dee4c647a0ac8ff974983fa ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647844622 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1647844622 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1647844622 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -65,11 +72,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1647844622 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1648310525 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1648310518 2924487 d8c659a9320f048eda20926ca449287f ""
+  "images//backpropaccuracy.png" 1648508501 21891 f7b9ddd51c15b75fab0af18ff2532bc8 ""
+  "images//backproplosses.png" 1648508478 21191 d985ecaae795ae65cd8afdbe27517070 ""
   "images//crossover.png" 1648345052 1886 477a5e9f7089e201d4687f2a1ae2328a ""
+  "images//geneticaccuracy.png" 1648511011 20546 11f8c5290d4dd80b0709f337072bca21 ""
+  "images//geneticlosses.png" 1648511028 26583 0d9c5db097ea7aa70f53201e38315b58 ""
   "images//nnDiagram.png" 1648337718 13631 521562a731ea2bc2f716cef646db72e4 ""
-  "report.aux" 1648392140 2793 69c04bd41c5f826f900591759492dd05 "pdflatex"
-  "report.out" 1648392140 1897 8caa28f69b18b4f6e9353a6653397955 "pdflatex"
-  "report.tex" 1648392139 8558 5a494b41c8f6d312ecb45463177c1ce1 ""
+  "report.aux" 1648512639 4029 6e5155fe664da2e9feecc2c1fdce61da "pdflatex"
+  "report.bbl" 1648512639 484 036c81b708246b3a122b70d53f303013 "bibtex report"
+  "report.out" 1648512639 2114 3ca9cbefa32f61f96ae24237a431122f "pdflatex"
+  "report.tex" 1648512637 12653 a847d2988dee4c647a0ac8ff974983fa ""
   (generated)
   "report.aux"
   "report.log"

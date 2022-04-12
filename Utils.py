@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import csv
+import matplotlib.pyplot as plt
 
 
 def sigmoid(x):
@@ -47,6 +48,14 @@ def importCSV(fileName, normDict, classifier):
             samples.append(rowList)
     return np.asarray(samples), np.asarray(classes)
 
+
+def plot(xPoints, yPoints, yLabel, title):
+    plt.scatter(xPoints, yPoints)
+    plt.plot(xPoints, yPoints)
+    plt.xlabel("Epoch")
+    plt.ylabel(yLabel)
+    plt.title(title)
+    plt.show()
 
 
 

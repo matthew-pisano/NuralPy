@@ -1,15 +1,23 @@
 \begin{thebibliography}{1}
 
-\bibitem{diabetesData}
-F.~E. Harrell, ``Diabetes data set,'' Dec 2002.
-
 \bibitem{cholesterolMgnt}
-M.~Benjamin~Wedro, ``Cholesterol management,'' Jul 2020.
-
-\bibitem{nnDiagram}
-M.~V.~S. Lima, ``Neural network diagram,'' May 2018.
+MD~Benjamin~Wedro.
+\newblock Cholesterol management, Jul 2020.
 
 \bibitem{crossoverDiagram}
-A.~Dutta, ``Crossover diagram,'' Jun 2019.
+Avik Dutta.
+\newblock Crossover diagram, Jun 2019.
+
+\bibitem{diabetesData}
+Frank~E Harrell.
+\newblock Diabetes data set, Dec 2002.
+
+\bibitem{goodLoss}
+George~V Jose.
+\newblock Useful plots to diagnose your neural network, Oct 2019.
+
+\bibitem{nnDiagram}
+Markus V.~S. Lima.
+\newblock Neural network diagram, May 2018.
 
 \end{thebibliography}
