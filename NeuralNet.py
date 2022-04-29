@@ -1,10 +1,5 @@
-# import the necessary packages
-import time
-
 import numpy as np
 import json
-
-from matplotlib import pyplot as plt
 
 import Utils
 
@@ -16,8 +11,8 @@ class NeuralNet:
 		self.trainer = trainer
 		self.trainer.prime(self.population, self.topography, self.loss)
 
-	def train(self, sampleList, classList, epochs=1000, displayUpdate=10, verbosity=0):
-		self.trainer.train(sampleList, classList, epochs, displayUpdate, verbosity)
+	def train(self, sampleList, classList, epochs=1000, displayUpdate=10, verbosity=0, showPlots=False):
+		self.trainer.train(sampleList, classList, epochs, displayUpdate, verbosity, showPlots)
 
 	def test(self, sample, memberId):
 		# Change into 2D array
@@ -52,13 +47,13 @@ class NeuralNet:
 						print("Output choice: "+str(choiceCopy)+", Confidence: "+str(outCopy[i][choiceCopy]*100)+"%")
 						outCopy[i][choiceCopy] = 0
 					print(("\033[32m[=======CORRECT=======]\033[38m" if correctGuess == 1
-						else "\033[93m[=======INCORRECT=======]\033[38m") + ", Correct choice: "+str(correctChoice))
+							else "\033[93m[=======INCORRECT=======]\033[38m") + ", Correct choice: "+str(correctChoice))
 				correct += correctGuess
 		# print("Timeat: "+str(time.time()-timeAt))
 		# timeAt = time.time()
 		# Calculate sum of squared errors for loss function
 		loss = 0.5 * np.sum((output - samples[1]) ** 2) / samples[1].shape[0]
-		#print("Timeat: " + str(time.time() - timeAt))
+		# print("Timeat: " + str(time.time() - timeAt))
 		return loss, correct / len(output)
 
 	def saveWeights(self, fileName):

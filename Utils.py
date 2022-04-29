@@ -39,12 +39,10 @@ def importCSV(fileName, normDict, classifier):
             rowList = []
             # Normalize data and add to list
             for key, value in normDict.items():
-                if row[key].count("male") > 0:
-                    rowList.append(0 if row[key] == "male" else 1)
-                else:
-                    rowList.append(float(row[key])/value)
-            # Check for 'o' in 'No diabetes'
-            classes.append([1, 0] if row[classifier].count("o") > 0 else [0, 1])
+                rowList.append(float(row[key])/value[0])
+            classList = [0, 0]
+            classList[int(row[classifier])] = 1
+            classes.append(classList)
             samples.append(rowList)
     return np.asarray(samples), np.asarray(classes)
 

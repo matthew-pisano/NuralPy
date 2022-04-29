@@ -2,8 +2,10 @@ import os.path
 import time
 import cv2
 import numpy as np
+
+import DecisionTree
 from NeuralNet import NeuralNet
-import tensorflow as tf
+# import tensorflow as tf
 
 from train import *
 
@@ -26,43 +28,34 @@ def toTuple(a):
 
 
 if __name__ == "__main__":
-    """dateset = tf.keras.datasets.mnist
-    (imgTrain, classTrain), (imgTest, classTest) = dateset.load_data()
-
-    imgTrain = tf.keras.utils.normalize(imgTrain, axis=1)
-    imgTest = tf.keras.utils.normalize(imgTest, axis=1)"""
-    normDict = {
-        "cholesterol": 500,
-        "glucose": 400,
-        "hdl_chol": 130,
-        # "chol_hd_ratio": 30,
-        "age": 100,
-        "gender": 1,
-        "bmi": 60,
-        "systolic_bp": 270,
-        "diastolic_bp": 150
+    fileName = "PrunedDiabetesDataSet.csv"
+    normThreshDict = {
+        "cholesterol": [500, 200],
+        "glucose": [400, 140],
+        "hdl_chol": [130, 60],
+        "chol_hd_ratio": [30, 2],
+        "age": [100, 40],
+        "height": [80, 67],
+        "weight": [350, 175],
+        "gender": [1, 0.5],
+        "bmi": [60, 30],
+        "systolic_bp": [270, 120],
+        "diastolic_bp": [150, 80]
     }
-    imgTrain, classTrain = Utils.importCSV("DiabetesDataSet.csv", normDict, "Diabetes")
+    DecisionTree.trimAttribDict(fileName, normThreshDict, 2)
+    imgTrain, classTrain = Utils.importCSV(fileName, normThreshDict, "Diabetes")
     trainTest = True, True
     trainSet = ([], [])
     testSet = ([], [])
     testLim = 390
     trainLim = testLim * .8
     tests = 0
-    # netShape = [784, 128, 128, 10]
-    netShape = [8, 2]
-    # net = NeuralNet(netShape, Backpropogator(learningRate=0.6))
-    net = NeuralNet(netShape, Genetic(6, 0.5, 0.01))
-    """if saveResume and os.path.exists("weights.csv"):
-        net.loadWeights("weights.csv")"""
+    netShape = [len(normThreshDict), 2]
+    net = NeuralNet(netShape, Backpropogator(learningRate=0.18))
+    # net = NeuralNet(netShape, Genetic(6, 0.5, 0.01))
     while tests < testLim:
-        # rawTrain = flatten(toTuple(imgTrain[tests]))
         rawTrain = imgTrain[tests]
         rawClass = classTrain[tests]
-        """rawClass = [0] * classTrain[0].shape[0]
-        for j in range(0, classTrain[0].shape[0]):
-            if j == classTrain[tests]:
-                rawClass[j] = 1"""
         if tests < trainLim:
             trainSet[0].append(rawTrain)
             trainSet[1].append(rawClass)
@@ -74,23 +67,13 @@ if __name__ == "__main__":
     timeDiff = None
     if trainTest[0]:
         t = time.time()
-        out = net.train(np.array(trainSet[0]), np.array(trainSet[1]), epochs=150, displayUpdate=1, verbosity=1)
+        out = net.train(np.array(trainSet[0]), np.array(trainSet[1]), epochs=150, displayUpdate=1, verbosity=1, showPlots=False)
         timeDiff = time.time() - t
         print("Trained after " + str(timeDiff) + "s")
         print("================================\n\n==============================")
-        # net.saveWeights("save.w")
     if trainTest[1]:
-        """try:
-            net.loadWeights("save.w")
-        except FileNotFoundError as e:
-            print("Could not load weights file")"""
         sampleSet = np.c_[np.array(testSet[0]), np.ones((np.array(testSet[0]).shape[0]))]
         loss = net.loss([sampleSet, np.array(testSet[1])], verbosity=1)
         print("Loss: " + str(loss[0]) + ", Correct: " + str(loss[1] * 100) + "%")
         if timeDiff:
             print("Overall score: "+str(loss[1]/timeDiff))
-        """img = cv2.imread("zero.jpg", cv2.IMREAD_GRAYSCALE)
-        newImg = normalize(flatten(img))
-        sampleSet = np.c_[np.array([newImg]), np.ones((np.array([newImg]).shape[0]))]
-        loss = net.loss([sampleSet, np.array([[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]])], verbosity=1)
-        print("Loss: " + str(loss[0]) + ", Correct: " + str(loss[1] * 100) + "%")"""

@@ -13,6 +13,7 @@ class Trainer:
         self.topography = None
         self.fittneses = [0]
         self.popSize = 1
+        self.type = ""
 
     def prime(self, population, topography, loss):
         self.population = population
@@ -44,7 +45,7 @@ class Trainer:
         for i in range(0, self.popSize):
             self.fittneses[i] = self.getFitness(i, samples)
 
-    def train(self, sampleList, classList, epochs=100, displayUpdate=10, verbosity=0):
+    def train(self, sampleList, classList, epochs=100, displayUpdate=10, verbosity=0, showPlots=False):
         epochLosses = []
         epochAccuracy = []
         epochTimes = []
@@ -85,9 +86,10 @@ class Trainer:
                     print(", Best loss: "+str(bestLoss)+", most correct: "+str(mostCorrect))
                 else:
                     print()
-
-        Utils.plot(epochTimes, epochLosses, "Loss", "Genetic Algorithm Loss Over Epochs")
-        Utils.plot(epochTimes, epochAccuracy, "Accuracy", "Genetic Algorithm Accuracy Over Epochs")
+        if showPlots:
+            algorithmName = "Backpropagation" if self.type == "backprop" else "Genetic Algorithm"
+            Utils.plot(epochTimes, epochLosses, "Loss", algorithmName+" Loss Over Epochs")
+            Utils.plot(epochTimes, epochAccuracy, "Accuracy", algorithmName+" Accuracy Over Epochs")
 
     def epochTrain(self, sample, classOf):
         pass
@@ -107,6 +109,7 @@ class Backpropogator(Trainer):
     def __init__(self, learningRate):
         super().__init__()
         self.learningRate = learningRate
+        self.type = "backprop"
 
     def prime(self, population, topography, loss):
         super().prime(population, topography, loss)
@@ -140,6 +143,7 @@ class Genetic(Trainer):
         self.crossoverRate = crossoverRate
         self.mutationRate = mutationRate
         self.genomeLength = 0
+        self.type = "genetic"
 
     def prime(self, population, topography, loss):
         super().prime(population, topography, loss)

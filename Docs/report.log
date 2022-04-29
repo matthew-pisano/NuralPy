@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.3.26)  28 MAR 2022 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.19)  29 APR 2022 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex
-(/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/report.tex
+**/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex
+(/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -143,51 +143,77 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip49
-) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/share/texmf-dist/tex/latex/datetime2/datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+ (/usr/share/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
+ (/usr/share/texmf-dist/tex/generic/tracklang/tracklang.tex)) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count269
+) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+)
+\XKV@depth=\count270
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texmf-dist/tex/latex/datetime2-english/datetime2-en-US.ldf
+File: datetime2-en-US.ldf 2019/10/21 v1.05 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/datetime2-english/datetime2-english-base.ldf
+File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
+)))
+
+Package datetime2 Warning: Region `en-GB' has ignored 
+(datetime2)                the following settings:
+(datetime2)                ord=raise,monthyearsep={, }
+ on input line 13.
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count269
+\l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box50
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
+\scratchcounter=\count272
 \scratchdimen=\dimen145
 \scratchbox=\box51
-\nofMPsegments=\count271
-\nofMParguments=\count272
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count273
+\nofMPsegments=\count273
+\nofMParguments=\count274
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count275
 \MPscratchDim=\dimen146
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
-\everyMPtoPDFconversion=\toks18
+\MPnumerator=\count276
+\makeMPintoPDFobject=\count277
+\everyMPtoPDFconversion=\toks20
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 18.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -195,78 +221,102 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count276
+\c@section@level=\count278
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 13.
+(Font)              <14.4> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 20.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./images//nnDiagram.png, id=67, 464.73625pt x 352.31625pt>
+<./images//nnDiagram.png, id=65, 464.73625pt x 352.31625pt>
 File: ./images//nnDiagram.png Graphic file (type png)
 <use ./images//nnDiagram.png>
-Package pdftex.def Info: ./images//nnDiagram.png  used on input line 40.
+Package pdftex.def Info: ./images//nnDiagram.png  used on input line 65.
 (pdftex.def)             Requested size: 139.42194pt x 105.69568pt.
+ [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 45.
+(Font)              <12> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 45.
+(Font)              <8> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 45.
- [2 <./images//nnDiagram.png>]
-<./images//crossover.png, id=83, 289.08pt x 175.65625pt>
+(Font)              <6> on input line 70.
+ [3 <./images//nnDiagram.png>] [4]
+<./images//crossover.png, id=101, 289.08pt x 175.65625pt>
 File: ./images//crossover.png Graphic file (type png)
 <use ./images//crossover.png>
-Package pdftex.def Info: ./images//crossover.png  used on input line 87.
+Package pdftex.def Info: ./images//crossover.png  used on input line 142.
 (pdftex.def)             Requested size: 144.53964pt x 87.8279pt.
- [3] [4 <./images//crossover.png>]
-<./images//backproplosses.png, id=102, 477.28313pt x 356.0803pt>
+ [5] [6 <./images//crossover.png>] [7]
+<./images//backproplosses.png, id=123, 475.7775pt x 356.83313pt>
 File: ./images//backproplosses.png Graphic file (type png)
 <use ./images//backproplosses.png>
-Package pdftex.def Info: ./images//backproplosses.png  used on input line 140.
-(pdftex.def)             Requested size: 168.47736pt x 125.68947pt.
-<./images//backpropaccuracy.png, id=103, 475.02469pt x 352.31625pt>
+Package pdftex.def Info: ./images//backproplosses.png  used on input line 195.
+(pdftex.def)             Requested size: 168.47736pt x 126.35811pt.
+<./images//backpropaccuracy.png, id=124, 470.50781pt x 354.57469pt>
 File: ./images//backpropaccuracy.png Graphic file (type png)
 <use ./images//backpropaccuracy.png>
-Package pdftex.def Info: ./images//backpropaccuracy.png  used on input line 145.
+Package pdftex.def Info: ./images//backpropaccuracy.png  used on input line 200.
+(pdftex.def)             Requested size: 168.47736pt x 126.96507pt.
+
+Underfull \hbox (badness 1173) in paragraph at lines 201--201
+\OT1/cmr/m/n/12 suc-ces-sive train-ing set epochs for
+ []
+
+[8 <./images//backproplosses.png (PNG copy)> <./images//backpropaccuracy.png (PNG copy)>]
+<./images//decisionlosses.png, id=133, 477.28313pt x 356.0803pt>
+File: ./images//decisionlosses.png Graphic file (type png)
+<use ./images//decisionlosses.png>
+Package pdftex.def Info: ./images//decisionlosses.png  used on input line 216.
+(pdftex.def)             Requested size: 168.47736pt x 125.68947pt.
+<./images//decisionaccuracy.png, id=134, 475.02469pt x 352.31625pt>
+File: ./images//decisionaccuracy.png Graphic file (type png)
+<use ./images//decisionaccuracy.png>
+Package pdftex.def Info: ./images//decisionaccuracy.png  used on input line 221.
 (pdftex.def)             Requested size: 168.47736pt x 124.95755pt.
- [5] [6 <./images//backproplosses.png (PNG copy)> <./images//backpropaccuracy.png (PNG copy)>]
-<./images//geneticlosses.png, id=117, 473.51906pt x 353.82187pt>
+
+Underfull \hbox (badness 1173) in paragraph at lines 222--222
+\OT1/cmr/m/n/12 suc-ces-sive train-ing set epochs for
+ []
+
+<./images//geneticlosses.png, id=136, 473.51906pt x 353.82187pt>
 File: ./images//geneticlosses.png Graphic file (type png)
 <use ./images//geneticlosses.png>
-Package pdftex.def Info: ./images//geneticlosses.png  used on input line 160.
+Package pdftex.def Info: ./images//geneticlosses.png  used on input line 236.
 (pdftex.def)             Requested size: 168.47736pt x 125.88568pt.
-<./images//geneticaccuracy.png, id=118, 475.02469pt x 356.83313pt>
+<./images//geneticaccuracy.png, id=137, 475.02469pt x 356.83313pt>
 File: ./images//geneticaccuracy.png Graphic file (type png)
 <use ./images//geneticaccuracy.png>
-Package pdftex.def Info: ./images//geneticaccuracy.png  used on input line 165.
+Package pdftex.def Info: ./images//geneticaccuracy.png  used on input line 241.
 (pdftex.def)             Requested size: 168.47736pt x 126.55957pt.
- [7 <./images//geneticlosses.png (PNG copy)> <./images//geneticaccuracy.png (PNG copy)>] (./report.bbl) [8] (./report.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./images//decisionlosses.png (PNG copy)> <./images//decisionaccuracy.png (PNG copy)>] [10 <./images//geneticlosses.png (PNG copy)> <./images//geneticaccuracy.png (PNG copy)>] (./report.bbl) [11] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 3CA9CBEFA32F61F96AE24237A431122F;2114.
+(rerunfilecheck)             Checksum: B504EB55F95F6823F93703595FE5AB33;1955.
  ) 
 Here is how much of TeX's memory you used:
- 8193 strings out of 478276
- 128891 string characters out of 5853013
- 422285 words of memory out of 5000000
- 26281 multiletter control sequences out of 15000+600000
- 474427 words of font info for 45 fonts, out of 8000000 for 9000
+ 11338 strings out of 478276
+ 198866 string characters out of 5853013
+ 493575 words of memory out of 5000000
+ 29380 multiletter control sequences out of 15000+600000
+ 474774 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,63p,326b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (8 pages, 216197 bytes).
+ 60i,9n,63p,554b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (11 pages, 293382 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
