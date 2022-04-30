@@ -19,6 +19,7 @@ class Node:
 
 
 class SamplePoint:
+    """Class representing a sample point of data"""
     def __init__(self, classifier, attribs):
         self.attributes = attribs
         """Values of the attributes of the sample point"""
@@ -26,7 +27,7 @@ class SamplePoint:
         """Classification of the sample point"""
 
     def __str__(self):
-        return "Class: " + self.classifier
+        return "Point Class: " + self.classifier
 
 
 def calcEntropy(decisionSamples, useAttribs, attribIndex=None):
@@ -35,6 +36,7 @@ def calcEntropy(decisionSamples, useAttribs, attribIndex=None):
     if not attribIndex:
         return calcEntropy(decisionSamples, useAttribs, -1)
     attribFrequency = [[0, 0, 0, 0]] * (len(decisionSamples[0].attributes) + 1)
+    # Calculate stats for each attribute for calculation
     # Loop for each of the samples
     for sample in decisionSamples:
         # For each of the attributes in each sample

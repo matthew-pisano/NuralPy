@@ -5,14 +5,18 @@ import matplotlib.pyplot as plt
 
 
 def sigmoid(x):
+    """Sigmoid function"""
     return 1.0 / (1 + np.exp(-x))
 
 
 def sigmoidDx(x):
+    """Derivative of sigmoid where `x` is already the output of the sigmoid function"""
+    # sig'(x) = sig(x) * (1 - sig(x))
     return x * (1 - x)
 
 
 def tanh(x):
+    """Calculates the tanh function"""
     try:
         math.pow(math.e, -0.667 * x)
     except Exception as e:
@@ -20,17 +24,8 @@ def tanh(x):
     return 3.432/(1+math.pow(math.e, -0.667*x)) - 1.716
 
 
-def toImage(array, size):
-    imgArray = np.array([[0.0]*size]*size)
-    for i in range(0, len(array)):
-        imgArray[i // size][i % size] = array[i]
-        if i == size**2 - 1 and i // size == size - 1:
-            return imgArray
-    return imgArray
-
-
-# Use dict to store maximum values for normalization
 def importCSV(fileName, normDict, classifier):
+    """Imports the data from a CSV file, normalize the data and assigns classes to each sample point"""
     samples = []
     classes = []
     with open(fileName, newline='') as csvfile:
@@ -48,6 +43,7 @@ def importCSV(fileName, normDict, classifier):
 
 
 def plot(xPoints, yPoints, yLabel, title):
+    """Creates a pyplot scatter plot for the given points"""
     plt.scatter(xPoints, yPoints)
     plt.plot(xPoints, yPoints)
     plt.xlabel("Epoch")
