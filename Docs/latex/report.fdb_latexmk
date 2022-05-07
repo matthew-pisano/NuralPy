@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex report"] 1651271540 "report.aux" "report.bbl" "report" 1651271719
+["bibtex report"] 1651959539 "report.aux" "report.bbl" "report" 1651959879
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1647844622 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "refs.bib" 1651199780 2527 06afbb4026157268ea28c97886f88462 ""
-  "report.aux" 1651271719 4644 0cc3eb757351ce57df05a7ff3d592027 "pdflatex"
+  "report.aux" 1651959879 5031 e009cc99d72e3e710220e903e2beb7bb "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
-["pdflatex"] 1651271719 "/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex" "report.pdf" "report" 1651271719
-  "/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex" 1651271718 19021 50894397fa912ca24965c2d6bbc8369d ""
+["pdflatex"] 1651959879 "/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex" "report.pdf" "report" 1651959879
+  "/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex" 1651959878 20441 cc2e05604b09dce5c481d3ab996d2855 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647844622 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1647844622 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1647844622 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -92,9 +92,9 @@
   "images//geneticaccuracy.png" 1648511011 20546 11f8c5290d4dd80b0709f337072bca21 ""
   "images//geneticlosses.png" 1648511028 26583 0d9c5db097ea7aa70f53201e38315b58 ""
   "images//nnDiagram.png" 1648337718 13631 521562a731ea2bc2f716cef646db72e4 ""
-  "report.aux" 1651271719 4644 0cc3eb757351ce57df05a7ff3d592027 "pdflatex"
-  "report.bbl" 1651271540 1412 581f775415cb4fd8dfef7689471c0d6f "bibtex report"
-  "report.out" 1651271719 1955 b504eb55f95f6823f93703595fe5ab33 "pdflatex"
+  "report.aux" 1651959879 5031 e009cc99d72e3e710220e903e2beb7bb "pdflatex"
+  "report.bbl" 1651959539 1412 581f775415cb4fd8dfef7689471c0d6f "bibtex report"
+  "report.out" 1651959879 2471 e94fe3c438e00dec06fcd1a9fd54efde "pdflatex"
   (generated)
   "report.aux"
   "report.log"

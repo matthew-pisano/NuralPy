@@ -24,7 +24,7 @@ def tanh(x):
     return 3.432/(1+math.pow(math.e, -0.667*x)) - 1.716
 
 
-def importCSV(fileName, normDict, classifier):
+def importCSV(fileName, normDict, classifier, trainTestSplit=0.8, normalize=True):
     """Imports the data from a CSV file, normalize the data and assigns classes to each sample point"""
     samples = []
     classes = []
@@ -34,12 +34,28 @@ def importCSV(fileName, normDict, classifier):
             rowList = []
             # Normalize data and add to list
             for key, value in normDict.items():
-                rowList.append(float(row[key])/value[0])
+                rowList.append(float(row[key])/(value[0] if normalize else 1))
             classList = [0, 0]
             classList[int(row[classifier])] = 1
             classes.append(classList)
             samples.append(rowList)
-    return np.asarray(samples), np.asarray(classes)
+    totalAttribs = np.asarray(samples)
+    totalClass = np.asarray(classes)
+    # Training set, a tuple of attribute and class data
+    trainSet = ([], [])
+    # Testing set, a tuple of attribute and class data
+    testSet = ([], [])
+    i = 0
+    # Divide sample points into training and testing sets
+    while i < len(totalAttribs):
+        if i < trainTestSplit * len(totalAttribs):
+            trainSet[0].append(totalAttribs[i])
+            trainSet[1].append(totalClass[i])
+        else:
+            testSet[0].append(totalAttribs[i])
+            testSet[1].append(totalClass[i])
+        i += 1
+    return trainSet, testSet
 
 
 def plot(xPoints, yPoints, yLabel, title):

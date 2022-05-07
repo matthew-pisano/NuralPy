@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.19)  29 APR 2022 18:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.19)  7 MAY 2022 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex
-(/home/matthew/Documents/pgrm/NeuralPy/Docs/report.tex
+**/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex
+(/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -237,7 +237,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./images//nnDiagram.png, id=65, 464.73625pt x 352.31625pt>
+<./images//nnDiagram.png, id=77, 464.73625pt x 352.31625pt>
 File: ./images//nnDiagram.png Graphic file (type png)
 <use ./images//nnDiagram.png>
 Package pdftex.def Info: ./images//nnDiagram.png  used on input line 65.
@@ -250,18 +250,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 70.
  [3 <./images//nnDiagram.png>] [4]
-<./images//crossover.png, id=101, 289.08pt x 175.65625pt>
+<./images//crossover.png, id=113, 289.08pt x 175.65625pt>
 File: ./images//crossover.png Graphic file (type png)
 <use ./images//crossover.png>
 Package pdftex.def Info: ./images//crossover.png  used on input line 142.
 (pdftex.def)             Requested size: 144.53964pt x 87.8279pt.
  [5] [6 <./images//crossover.png>] [7]
-<./images//backproplosses.png, id=123, 475.7775pt x 356.83313pt>
+<./images//backproplosses.png, id=135, 475.7775pt x 356.83313pt>
 File: ./images//backproplosses.png Graphic file (type png)
 <use ./images//backproplosses.png>
 Package pdftex.def Info: ./images//backproplosses.png  used on input line 195.
 (pdftex.def)             Requested size: 168.47736pt x 126.35811pt.
-<./images//backpropaccuracy.png, id=124, 470.50781pt x 354.57469pt>
+<./images//backpropaccuracy.png, id=136, 470.50781pt x 354.57469pt>
 File: ./images//backpropaccuracy.png Graphic file (type png)
 <use ./images//backpropaccuracy.png>
 Package pdftex.def Info: ./images//backpropaccuracy.png  used on input line 200.
@@ -272,51 +272,51 @@ Underfull \hbox (badness 1173) in paragraph at lines 201--201
  []
 
 [8 <./images//backproplosses.png (PNG copy)> <./images//backpropaccuracy.png (PNG copy)>]
-<./images//decisionlosses.png, id=133, 477.28313pt x 356.0803pt>
+<./images//decisionlosses.png, id=145, 477.28313pt x 356.0803pt>
 File: ./images//decisionlosses.png Graphic file (type png)
 <use ./images//decisionlosses.png>
-Package pdftex.def Info: ./images//decisionlosses.png  used on input line 216.
+Package pdftex.def Info: ./images//decisionlosses.png  used on input line 218.
 (pdftex.def)             Requested size: 168.47736pt x 125.68947pt.
-<./images//decisionaccuracy.png, id=134, 475.02469pt x 352.31625pt>
+<./images//decisionaccuracy.png, id=146, 475.02469pt x 352.31625pt>
 File: ./images//decisionaccuracy.png Graphic file (type png)
 <use ./images//decisionaccuracy.png>
-Package pdftex.def Info: ./images//decisionaccuracy.png  used on input line 221.
+Package pdftex.def Info: ./images//decisionaccuracy.png  used on input line 223.
 (pdftex.def)             Requested size: 168.47736pt x 124.95755pt.
 
-Underfull \hbox (badness 1173) in paragraph at lines 222--222
+Underfull \hbox (badness 1173) in paragraph at lines 224--224
 \OT1/cmr/m/n/12 suc-ces-sive train-ing set epochs for
  []
 
-<./images//geneticlosses.png, id=136, 473.51906pt x 353.82187pt>
+<./images//geneticlosses.png, id=148, 473.51906pt x 353.82187pt>
 File: ./images//geneticlosses.png Graphic file (type png)
 <use ./images//geneticlosses.png>
-Package pdftex.def Info: ./images//geneticlosses.png  used on input line 236.
+Package pdftex.def Info: ./images//geneticlosses.png  used on input line 239.
 (pdftex.def)             Requested size: 168.47736pt x 125.88568pt.
-<./images//geneticaccuracy.png, id=137, 475.02469pt x 356.83313pt>
+<./images//geneticaccuracy.png, id=149, 475.02469pt x 356.83313pt>
 File: ./images//geneticaccuracy.png Graphic file (type png)
 <use ./images//geneticaccuracy.png>
-Package pdftex.def Info: ./images//geneticaccuracy.png  used on input line 241.
+Package pdftex.def Info: ./images//geneticaccuracy.png  used on input line 244.
 (pdftex.def)             Requested size: 168.47736pt x 126.55957pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./images//decisionlosses.png (PNG copy)> <./images//decisionaccuracy.png (PNG copy)>] [10 <./images//geneticlosses.png (PNG copy)> <./images//geneticaccuracy.png (PNG copy)>] (./report.bbl) [11] (./report.aux)
+[9 <./images//decisionlosses.png (PNG copy)> <./images//decisionaccuracy.png (PNG copy)>] [10 <./images//geneticlosses.png (PNG copy)> <./images//geneticaccuracy.png (PNG copy)>] (./report.bbl [11]) [12] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: B504EB55F95F6823F93703595FE5AB33;1955.
+(rerunfilecheck)             Checksum: E94FE3C438E00DEC06FCD1A9FD54EFDE;2471.
  ) 
 Here is how much of TeX's memory you used:
- 11338 strings out of 478276
- 198866 string characters out of 5853013
- 493575 words of memory out of 5000000
- 29380 multiletter control sequences out of 15000+600000
+ 11345 strings out of 478276
+ 198981 string characters out of 5853013
+ 493577 words of memory out of 5000000
+ 29383 multiletter control sequences out of 15000+600000
  474774 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,63p,554b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,63p,560b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (11 pages, 293382 bytes).
+Output written on report.pdf (12 pages, 295929 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,5 @@
 import math
+import os
 
 trainingSet = []
 """Holds all the training sample points"""
@@ -11,6 +12,7 @@ titles = []
 
 
 class Node:
+    """Class representing a node on the decision tree"""
     def __init__(self):
         self.left = None
         self.right = None
@@ -243,10 +245,14 @@ def calcAccuracy(decisionSamples, root):
     return correctGuesses / len(decisionSamples)
 
 
-def trimAttribDict(fileName, attribDict, numTrim):
+def trimAttribDict(fileName, attribDict, numTrim, root=None):
+    """Builds the tree and trims the given number of attributes from the given list"""
+    if numTrim < 1:
+        return
     parseData(fileName)
     useAttribs = setUseAttribs(attribDict)
-    root = Node()
+    if not root:
+        root = Node()
     # Build tree
     buildTree(trainingSet, useAttribs, root, 0.005)
     orderedAttribList = list(dict(sorted(attribGains.items(), key=lambda item: item[1])))
@@ -255,6 +261,7 @@ def trimAttribDict(fileName, attribDict, numTrim):
 
 
 def main():
+    """Miniature testing class for the decision tree"""
     attribDict = {
         "cholesterol": [500, 200],
         "glucose": [400, 140],
@@ -266,15 +273,13 @@ def main():
         "systolic_bp": [270, 120],
         "diastolic_bp": [150, 80]
     }
-    trimAttribDict("PrunedDiabetesDataSet.csv", attribDict, 3)
-    print(attribDict)
-    """parseData("DiabetesDataSet.csv")
     root = Node()
-    # Build tree
-    buildTree(trainingSet, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], root, 0.005)
+    trimAttribDict(os.path.dirname(os.path.realpath(__file__))+"/PrunedDiabetesDataSet.csv", attribDict, 3, root)
+    print("Pruned attribute dict: "+str(attribDict))
+    # Run through tree and test accuracy
     accuracy = calcAccuracy(testingSet, root)
     print("Accuracy of tree: " + str(accuracy))
-    print("Attribute Gains: "+str(attribGains))"""
+    print("Attribute Gains: "+str(attribGains))
 
 
 if __name__ == "__main__":

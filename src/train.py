@@ -5,20 +5,15 @@ import Utils
 
 
 class Trainer:
-    """Parent class representing a training method for the neural network"""
-    def __init__(self):
-        self.population = None
-        self.loss = None
-        self.topography = None
-        self.fittneses = [0]
-        self.popSize = 1
-        self.type = ""
-
+    """Abstract parent class representing a training method for the neural network"""
     def prime(self, population, topography, loss):
         """Initialize additional properties"""
+        self.fittneses = [0]
+        self.popSize = 1
         self.population = population
         self.loss = loss
         self.topography = topography
+        self.type = ""
 
     def selection(self, selectCount):
         """Selects the best `selectCount` number of networks from the population.
@@ -50,8 +45,9 @@ class Trainer:
         for i in range(0, self.popSize):
             self.fittneses[i] = self.getFitness(i, samples)
 
-    def train(self, sampleList, classList, epochs=100, displayUpdate=10, verbosity=0, showPlots=False):
-        """Trains the population of networks over the given sample set"""
+    def train(self, sampleList, classList, epochs: int = 1000, displayUpdate: int = 10, verbosity: int = 0, showPlots: bool = False):
+        """Trains the population of networks over the given sample set.  'Generic' method, functionality is not
+        specific to one trainer algorithm"""
         epochLosses = []
         epochAccuracy = []
         epochTimes = []
@@ -97,7 +93,8 @@ class Trainer:
             Utils.plot(epochTimes, epochAccuracy, "Accuracy", algorithmName+" Accuracy Over Epochs")
 
     def epochTrain(self, sample, classOf):
-        """Stub method to be overriden by subclasses"""
+        """Stub method to be overriden by subclasses.  This method is different for each trainer for their own
+        specific needs"""
         pass
 
     def initMember(self):
@@ -158,6 +155,7 @@ class Genetic(Trainer):
         """Initialize the genome length and create the fittness array"""
         super().prime(population, topography, loss)
         self.genomeLength = sum(topography) - topography[-1]
+        # Initialize for the needed number of individuals
         self.fittneses = [0] * self.popSize
         # Initialize all members
         for i in range(0, self.popSize):

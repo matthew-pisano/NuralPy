@@ -1,0 +1,468 @@
+Epoch: 0, Average Loss: 0.11736924032334, Correct: 88.14102564102564%
+Epoch: 1, Average Loss: 0.11394950421928421, Correct: 88.14102564102564%
+Epoch: 2, Average Loss: 0.11329319591994977, Correct: 88.14102564102564%
+Epoch: 3, Average Loss: 0.1124673685177596, Correct: 88.14102564102564%
+Epoch: 4, Average Loss: 0.11114637289582209, Correct: 88.46153846153845%
+Epoch: 5, Average Loss: 0.10930495143922767, Correct: 88.78205128205127%
+Epoch: 6, Average Loss: 0.10698666711899299, Correct: 89.1025641025641%
+Epoch: 7, Average Loss: 0.1042771193713551, Correct: 89.74358974358975%
+Epoch: 8, Average Loss: 0.10129079733565592, Correct: 89.74358974358975%
+Epoch: 9, Average Loss: 0.09815061293732312, Correct: 91.02564102564102%
+Epoch: 10, Average Loss: 0.09496827322710177, Correct: 91.98717948717949%
+Epoch: 11, Average Loss: 0.09183276422648134, Correct: 92.3076923076923%
+Epoch: 12, Average Loss: 0.08880747581609331, Correct: 92.62820512820514%
+Epoch: 13, Average Loss: 0.08593283112286094, Correct: 92.62820512820514%
+Epoch: 14, Average Loss: 0.08323112192887527, Correct: 91.98717948717949%
+Epoch: 15, Average Loss: 0.08071147929065409, Correct: 92.94871794871796%
+Epoch: 16, Average Loss: 0.07837407167868612, Correct: 92.94871794871796%
+Epoch: 17, Average Loss: 0.07621331422682272, Correct: 93.58974358974359%
+Epoch: 18, Average Loss: 0.07422018018921173, Correct: 93.91025641025641%
+Epoch: 19, Average Loss: 0.07238379964679569, Correct: 94.23076923076923%
+Epoch: 20, Average Loss: 0.0706925298595433, Correct: 94.23076923076923%
+Epoch: 21, Average Loss: 0.06913464907846893, Correct: 94.23076923076923%
+Epoch: 22, Average Loss: 0.06769878865776548, Correct: 94.23076923076923%
+Epoch: 23, Average Loss: 0.06637418666209631, Correct: 94.23076923076923%
+Epoch: 24, Average Loss: 0.06515082182272781, Correct: 94.23076923076923%
+Epoch: 25, Average Loss: 0.06401946887312487, Correct: 94.23076923076923%
+Epoch: 26, Average Loss: 0.06297170355875596, Correct: 93.91025641025641%
+Epoch: 27, Average Loss: 0.06199987663350525, Correct: 93.91025641025641%
+Epoch: 28, Average Loss: 0.061097069872458665, Correct: 94.23076923076923%
+Epoch: 29, Average Loss: 0.060257042765898015, Correct: 94.23076923076923%
+Epoch: 30, Average Loss: 0.059474175546978376, Correct: 94.23076923076923%
+Epoch: 31, Average Loss: 0.058743412142271294, Correct: 94.23076923076923%
+Epoch: 32, Average Loss: 0.0580602052339018, Correct: 94.23076923076923%
+Epoch: 33, Average Loss: 0.05742046468224169, Correct: 94.23076923076923%
+Epoch: 34, Average Loss: 0.05682050993683607, Correct: 94.23076923076923%
+Epoch: 35, Average Loss: 0.05625702666076021, Correct: 94.23076923076923%
+Epoch: 36, Average Loss: 0.05572702754033371, Correct: 94.23076923076923%
+Epoch: 37, Average Loss: 0.055227817099663915, Correct: 94.23076923076923%
+Epoch: 38, Average Loss: 0.05475696025434963, Correct: 94.23076923076923%
+Epoch: 39, Average Loss: 0.054312254297771416, Correct: 94.23076923076923%
+Epoch: 40, Average Loss: 0.05389170400093649, Correct: 94.23076923076923%
+Epoch: 41, Average Loss: 0.05349349951209838, Correct: 94.23076923076923%
+Epoch: 42, Average Loss: 0.05311599675811999, Correct: 94.23076923076923%
+Epoch: 43, Average Loss: 0.05275770007099073, Correct: 94.23076923076923%
+Epoch: 44, Average Loss: 0.05241724678691412, Correct: 94.23076923076923%
+Epoch: 45, Average Loss: 0.05209339358995221, Correct: 94.55128205128204%
+Epoch: 46, Average Loss: 0.05178500439611866, Correct: 94.55128205128204%
+Epoch: 47, Average Loss: 0.051491039596339314, Correct: 94.55128205128204%
+Epoch: 48, Average Loss: 0.05121054649747491, Correct: 94.87179487179486%
+Epoch: 49, Average Loss: 0.050942650819474126, Correct: 94.87179487179486%
+Epoch: 50, Average Loss: 0.05068654912368116, Correct: 94.87179487179486%
+Epoch: 51, Average Loss: 0.050441502062436645, Correct: 94.87179487179486%
+Epoch: 52, Average Loss: 0.050206828353500814, Correct: 95.1923076923077%
+Epoch: 53, Average Loss: 0.04998189939463946, Correct: 95.1923076923077%
+Epoch: 54, Average Loss: 0.04976613444409683, Correct: 95.1923076923077%
+Epoch: 55, Average Loss: 0.04955899630178734, Correct: 95.1923076923077%
+Epoch: 56, Average Loss: 0.04935998743401267, Correct: 95.1923076923077%
+Epoch: 57, Average Loss: 0.049168646491485224, Correct: 95.1923076923077%
+Epoch: 58, Average Loss: 0.0489845451765344, Correct: 95.1923076923077%
+Epoch: 59, Average Loss: 0.04880728542069889, Correct: 95.1923076923077%
+Epoch: 60, Average Loss: 0.04863649683856016, Correct: 95.1923076923077%
+Epoch: 61, Average Loss: 0.04847183442773992, Correct: 95.1923076923077%
+Epoch: 62, Average Loss: 0.048312976488537204, Correct: 95.1923076923077%
+Epoch: 63, Average Loss: 0.04815962273979175, Correct: 95.1923076923077%
+Epoch: 64, Average Loss: 0.0480114926102799, Correct: 95.1923076923077%
+Epoch: 65, Average Loss: 0.047868323687334194, Correct: 95.1923076923077%
+Epoch: 66, Average Loss: 0.047729870306467144, Correct: 95.1923076923077%
+Epoch: 67, Average Loss: 0.04759590226761402, Correct: 95.1923076923077%
+Epoch: 68, Average Loss: 0.04746620366522021, Correct: 95.1923076923077%
+Epoch: 69, Average Loss: 0.04734057182081568, Correct: 95.1923076923077%
+Epoch: 70, Average Loss: 0.047218816307966184, Correct: 95.1923076923077%
+Epoch: 71, Average Loss: 0.0471007580605901, Correct: 95.1923076923077%
+Epoch: 72, Average Loss: 0.046986228556599376, Correct: 95.1923076923077%
+Epoch: 73, Average Loss: 0.046875069069679774, Correct: 95.1923076923077%
+Epoch: 74, Average Loss: 0.04676712998278386, Correct: 95.1923076923077%
+Epoch: 75, Average Loss: 0.046662270157579386, Correct: 95.1923076923077%
+Epoch: 76, Average Loss: 0.04656035635469257, Correct: 95.1923076923077%
+Epoch: 77, Average Loss: 0.046461262700111354, Correct: 95.1923076923077%
+Epoch: 78, Average Loss: 0.04636487019358431, Correct: 95.1923076923077%
+Epoch: 79, Average Loss: 0.046271066255267106, Correct: 95.1923076923077%
+Epoch: 80, Average Loss: 0.04617974430723999, Correct: 95.1923076923077%
+Epoch: 81, Average Loss: 0.04609080338685184, Correct: 95.1923076923077%
+Epoch: 82, Average Loss: 0.04600414778914071, Correct: 95.1923076923077%
+Epoch: 83, Average Loss: 0.04591968673584666, Correct: 95.1923076923077%
+Epoch: 84, Average Loss: 0.04583733406876784, Correct: 95.1923076923077%
+Epoch: 85, Average Loss: 0.04575700796542321, Correct: 95.1923076923077%
+Epoch: 86, Average Loss: 0.04567863067517529, Correct: 95.1923076923077%
+Epoch: 87, Average Loss: 0.04560212827413656, Correct: 95.1923076923077%
+Epoch: 88, Average Loss: 0.04552743043733639, Correct: 95.1923076923077%
+Epoch: 89, Average Loss: 0.04545447022676342, Correct: 95.1923076923077%
+Epoch: 90, Average Loss: 0.045383183894022384, Correct: 95.1923076923077%
+Epoch: 91, Average Loss: 0.04531351069645606, Correct: 95.1923076923077%
+Epoch: 92, Average Loss: 0.045245392725684064, Correct: 95.1923076923077%
+Epoch: 93, Average Loss: 0.04517877474760201, Correct: 95.1923076923077%
+Epoch: 94, Average Loss: 0.04511360405296593, Correct: 95.1923076923077%
+Epoch: 95, Average Loss: 0.04504983031776256, Correct: 95.1923076923077%
+Epoch: 96, Average Loss: 0.044987405472633225, Correct: 95.1923076923077%
+Epoch: 97, Average Loss: 0.044926283580680314, Correct: 95.1923076923077%
+Epoch: 98, Average Loss: 0.04486642072304129, Correct: 95.1923076923077%
+Epoch: 99, Average Loss: 0.044807774891665514, Correct: 95.1923076923077%
+Epoch: 100, Average Loss: 0.04475030588877542, Correct: 95.1923076923077%
+Epoch: 101, Average Loss: 0.044693975232535085, Correct: 95.1923076923077%
+Epoch: 102, Average Loss: 0.04463874606848755, Correct: 95.1923076923077%
+Epoch: 103, Average Loss: 0.04458458308635731, Correct: 95.1923076923077%
+Epoch: 104, Average Loss: 0.04453145244184523, Correct: 95.1923076923077%
+Epoch: 105, Average Loss: 0.0444793216830734, Correct: 95.1923076923077%
+Epoch: 106, Average Loss: 0.0444281596813625, Correct: 95.1923076923077%
+Epoch: 107, Average Loss: 0.04437793656604983, Correct: 95.1923076923077%
+Epoch: 108, Average Loss: 0.044328623663077105, Correct: 95.1923076923077%
+Epoch: 109, Average Loss: 0.0442801934370984, Correct: 95.1923076923077%
+Epoch: 110, Average Loss: 0.044232619436876716, Correct: 95.1923076923077%
+Epoch: 111, Average Loss: 0.04418587624375479, Correct: 95.1923076923077%
+Epoch: 112, Average Loss: 0.04413993942300175, Correct: 95.1923076923077%
+Epoch: 113, Average Loss: 0.04409478547785112, Correct: 95.1923076923077%
+Epoch: 114, Average Loss: 0.04405039180605977, Correct: 95.1923076923077%
+Epoch: 115, Average Loss: 0.04400673665882842, Correct: 95.1923076923077%
+Epoch: 116, Average Loss: 0.043963799101936984, Correct: 95.1923076923077%
+Epoch: 117, Average Loss: 0.04392155897895689, Correct: 95.1923076923077%
+Epoch: 118, Average Loss: 0.04387999687641353, Correct: 95.1923076923077%
+Epoch: 119, Average Loss: 0.04383909409077956, Correct: 95.1923076923077%
+Epoch: 120, Average Loss: 0.043798832597188746, Correct: 95.1923076923077%
+Epoch: 121, Average Loss: 0.043759195019767265, Correct: 95.1923076923077%
+Epoch: 122, Average Loss: 0.043720164603486114, Correct: 95.1923076923077%
+Epoch: 123, Average Loss: 0.04368172518744538, Correct: 95.1923076923077%
+Epoch: 124, Average Loss: 0.043643861179506076, Correct: 95.1923076923077%
+Epoch: 125, Average Loss: 0.043606557532191954, Correct: 95.1923076923077%
+Epoch: 126, Average Loss: 0.043569799719787694, Correct: 95.1923076923077%
+Epoch: 127, Average Loss: 0.04353357371656541, Correct: 95.1923076923077%
+Epoch: 128, Average Loss: 0.04349786597607548, Correct: 95.1923076923077%
+Epoch: 129, Average Loss: 0.043462663411441727, Correct: 95.1923076923077%
+Epoch: 130, Average Loss: 0.043427953376605134, Correct: 95.1923076923077%
+Epoch: 131, Average Loss: 0.04339372364846336, Correct: 95.1923076923077%
+Epoch: 132, Average Loss: 0.04335996240985679, Correct: 95.1923076923077%
+Epoch: 133, Average Loss: 0.04332665823335521, Correct: 95.1923076923077%
+Epoch: 134, Average Loss: 0.04329380006580143, Correct: 95.1923076923077%
+Epoch: 135, Average Loss: 0.04326137721357143, Correct: 95.1923076923077%
+Epoch: 136, Average Loss: 0.04322937932851269, Correct: 95.1923076923077%
+Epoch: 137, Average Loss: 0.04319779639452475, Correct: 95.1923076923077%
+Epoch: 138, Average Loss: 0.04316661871474832, Correct: 95.1923076923077%
+Epoch: 139, Average Loss: 0.04313583689933123, Correct: 95.1923076923077%
+Epoch: 140, Average Loss: 0.04310544185374116, Correct: 95.1923076923077%
+Epoch: 141, Average Loss: 0.04307542476759721, Correct: 95.1923076923077%
+Epoch: 142, Average Loss: 0.043045777103993675, Correct: 95.1923076923077%
+Epoch: 143, Average Loss: 0.043016490589291086, Correct: 95.1923076923077%
+Epoch: 144, Average Loss: 0.0429875572033512, Correct: 95.1923076923077%
+Epoch: 145, Average Loss: 0.042958969170193345, Correct: 95.1923076923077%
+Epoch: 146, Average Loss: 0.04293071894905151, Correct: 95.1923076923077%
+Epoch: 147, Average Loss: 0.04290279922581237, Correct: 95.1923076923077%
+Epoch: 148, Average Loss: 0.0428752029048155, Correct: 95.1923076923077%
+Epoch: 149, Average Loss: 0.042847923100998206, Correct: 95.1923076923077%
+Trained after 0.7172713279724121s
+================================
+
+==============================
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 88.99896844791502%
+Output choice: 1, Confidence: 11.222007415108871%
+Sample Attributes: [180.0, 92.0, 34.0, 5.3, 63.0, 69.0, 169.0, 1.0, 25.0, 145.0, 72.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 97.19195862352362%
+Output choice: 1, Confidence: 2.927772407422754%
+Sample Attributes: [194.0, 54.0, 57.0, 3.4, 63.0, 70.0, 181.0, 1.0, 26.0, 184.0, 76.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 93.21110776293663%
+Output choice: 1, Confidence: 6.545662661646961%
+Sample Attributes: [194.0, 80.0, 34.0, 5.7, 63.0, 73.0, 175.0, 1.0, 23.1, 131.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 96.0629242055615%
+Output choice: 1, Confidence: 3.7377975046009775%
+Sample Attributes: [212.0, 82.0, 68.0, 3.1, 63.0, 70.0, 161.0, 1.0, 23.1, 180.0, 110.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 94.34480920084376%
+Output choice: 1, Confidence: 5.51316586072399%
+Sample Attributes: [293.0, 87.0, 120.0, 2.4, 63.0, 64.0, 179.0, 0.0, 30.7, 142.0, 80.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 70.87265819402147%
+Output choice: 1, Confidence: 27.52410865739111%
+Sample Attributes: [194.0, 95.0, 36.0, 5.4, 63.0, 58.0, 210.0, 0.0, 43.9, 140.0, 100.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 80.82499969009874%
+Output choice: 1, Confidence: 19.230582575522178%
+Sample Attributes: [277.0, 88.0, 45.0, 6.2, 63.0, 64.0, 223.0, 0.0, 38.3, 220.0, 100.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 89.9659862889597%
+Output choice: 1, Confidence: 9.567380958916726%
+Sample Attributes: [157.0, 91.0, 34.0, 4.6, 63.0, 69.0, 166.0, 1.0, 24.5, 106.0, 82.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 54.94994491806436%
+Output choice: 0, Confidence: 43.752410619769925%
+Sample Attributes: [283.0, 145.0, 39.0, 7.3, 63.0, 61.0, 200.0, 0.0, 37.8, 190.0, 110.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 68.51209537587384%
+Output choice: 1, Confidence: 32.0974708678724%
+Sample Attributes: [215.0, 119.0, 44.0, 3.9, 63.0, 63.0, 158.0, 0.0, 28.0, 160.0, 68.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 95.02158913667937%
+Output choice: 0, Confidence: 4.889370621518179%
+Sample Attributes: [342.0, 251.0, 48.0, 7.1, 63.0, 65.0, 201.0, 0.0, 33.4, 178.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 89.52299542008132%
+Output choice: 1, Confidence: 9.96768832678043%
+Sample Attributes: [202.0, 81.0, 55.0, 3.7, 64.0, 62.0, 167.0, 0.0, 30.5, 190.0, 118.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 80.19296389111527%
+Output choice: 1, Confidence: 19.317910878099326%
+Sample Attributes: [255.0, 100.0, 34.0, 7.5, 64.0, 68.0, 227.0, 1.0, 34.5, 134.0, 74.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 66.98534536627504%
+Output choice: 0, Confidence: 34.42139425293699%
+Sample Attributes: [181.0, 177.0, 24.0, 7.5, 64.0, 71.0, 225.0, 1.0, 31.4, 130.0, 66.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 85.90924357196437%
+Output choice: 1, Confidence: 13.908777344281312%
+Sample Attributes: [249.0, 90.0, 28.0, 8.9, 64.0, 68.0, 183.0, 1.0, 27.8, 138.0, 80.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 79.60561017223398%
+Output choice: 0, Confidence: 20.21947470484267%
+Sample Attributes: [249.0, 197.0, 44.0, 5.7, 64.0, 63.0, 159.0, 0.0, 28.2, 151.0, 85.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 70.27222048023309%
+Output choice: 1, Confidence: 28.490736951363417%
+Sample Attributes: [219.0, 106.0, 50.0, 4.4, 65.0, 63.0, 233.0, 0.0, 41.3, 140.0, 90.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 85.90011433490561%
+Output choice: 1, Confidence: 14.05123884799981%
+Sample Attributes: [229.0, 95.0, 74.0, 3.1, 65.0, 62.0, 151.0, 0.0, 27.6, 125.0, 64.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 76.73705360310616%
+Output choice: 1, Confidence: 22.517777586239962%
+Sample Attributes: [212.0, 97.0, 45.0, 4.7, 65.0, 61.0, 187.0, 0.0, 35.3, 158.0, 94.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 93.1663284226737%
+Output choice: 1, Confidence: 7.037994229146502%
+Sample Attributes: [170.0, 67.0, 33.0, 5.2, 65.0, 69.0, 182.0, 1.0, 26.9, 140.0, 65.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 55.52008113511425%
+Output choice: 0, Confidence: 45.18605755154512%
+Sample Attributes: [159.0, 172.0, 28.0, 5.7, 65.0, 70.0, 181.0, 1.0, 26.0, 142.0, 81.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 99.38471084214973%
+Output choice: 0, Confidence: 0.6487565722975603%
+Sample Attributes: [224.0, 341.0, 33.0, 6.8, 65.0, 67.0, 197.0, 1.0, 30.9, 160.0, 80.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 93.80162285768941%
+Output choice: 1, Confidence: 6.0148193394712814%
+Sample Attributes: [263.0, 82.0, 92.0, 2.9, 66.0, 66.0, 121.0, 0.0, 19.5, 104.0, 64.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 93.91209607235447%
+Output choice: 1, Confidence: 6.020552853005129%
+Sample Attributes: [184.0, 76.0, 42.0, 4.4, 66.0, 74.0, 185.0, 1.0, 23.8, 130.0, 75.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 76.03792307049473%
+Output choice: 1, Confidence: 23.069759088500405%
+Sample Attributes: [281.0, 92.0, 41.0, 6.9, 66.0, 62.0, 185.0, 0.0, 33.8, 158.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 81.11115249280022%
+Output choice: 1, Confidence: 18.88493064646413%
+Sample Attributes: [221.0, 120.0, 83.0, 2.7, 66.0, 64.0, 130.0, 0.0, 22.3, 110.0, 64.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 0
+Output choice: 1, Confidence: 66.87367152249487%
+Output choice: 0, Confidence: 34.531129213257834%
+Sample Attributes: [188.0, 174.0, 24.0, 7.8, 66.0, 68.0, 210.0, 1.0, 31.9, 160.0, 78.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 81.69071611708534%
+Output choice: 1, Confidence: 18.488326501061536%
+Sample Attributes: [246.0, 104.0, 62.0, 4.0, 66.0, 66.0, 189.0, 0.0, 30.5, 200.0, 94.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 53.644418983760346%
+Output choice: 0, Confidence: 46.221326463277066%
+Sample Attributes: [204.0, 173.0, 37.0, 5.5, 66.0, 67.0, 146.0, 1.0, 22.9, 138.0, 78.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 84.90328726641553%
+Output choice: 1, Confidence: 16.621967967683382%
+Sample Attributes: [78.0, 93.0, 12.0, 6.5, 67.0, 67.0, 119.0, 1.0, 18.6, 110.0, 50.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 89.64913933704054%
+Output choice: 1, Confidence: 10.0158963277842%
+Sample Attributes: [206.0, 85.0, 46.0, 4.5, 67.0, 67.0, 178.0, 1.0, 27.9, 119.0, 68.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 74.19326928888673%
+Output choice: 1, Confidence: 25.386752831274073%
+Sample Attributes: [174.0, 125.0, 44.0, 4.0, 67.0, 68.0, 198.0, 1.0, 30.1, 119.0, 72.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 79.27875373133281%
+Output choice: 1, Confidence: 18.866513017059596%
+Sample Attributes: [254.0, 121.0, 39.0, 6.5, 67.0, 68.0, 167.0, 1.0, 25.4, 161.0, 118.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 70.57708550428991%
+Output choice: 1, Confidence: 29.551785318439617%
+Sample Attributes: [198.0, 118.0, 46.0, 4.3, 68.0, 63.0, 124.0, 0.0, 22.0, 130.0, 70.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 0
+Output choice: 1, Confidence: 99.56578877266085%
+Output choice: 0, Confidence: 0.4538173946462995%
+Sample Attributes: [143.0, 371.0, 46.0, 3.1, 68.0, 67.0, 158.0, 1.0, 24.7, 138.0, 82.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 90.621122572481%
+Output choice: 1, Confidence: 8.7011907015779%
+Sample Attributes: [207.0, 77.0, 46.0, 4.5, 68.0, 55.0, 130.0, 1.0, 30.2, 199.0, 115.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 84.45184214819118%
+Output choice: 1, Confidence: 14.730376200088333%
+Sample Attributes: [236.0, 111.0, 82.0, 2.9, 68.0, 61.0, 119.0, 0.0, 22.5, 142.0, 96.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 88.12926305058079%
+Output choice: 1, Confidence: 10.886412652366806%
+Sample Attributes: [260.0, 68.0, 60.0, 4.3, 69.0, 59.0, 179.0, 0.0, 36.1, 158.0, 98.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 86.37490431869598%
+Output choice: 1, Confidence: 13.583960599024698%
+Sample Attributes: [242.0, 74.0, 55.0, 4.4, 70.0, 66.0, 200.0, 0.0, 32.3, 140.0, 65.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 87.61179431066898%
+Output choice: 1, Confidence: 11.935822910640297%
+Sample Attributes: [186.0, 97.0, 50.0, 3.7, 70.0, 67.0, 178.0, 1.0, 27.9, 148.0, 88.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 76.53209526614361%
+Output choice: 0, Confidence: 23.374565521033148%
+Sample Attributes: [182.0, 206.0, 43.0, 4.2, 70.0, 69.0, 214.0, 1.0, 31.6, 158.0, 90.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 57.492791599354796%
+Output choice: 1, Confidence: 40.086474678006624%
+Sample Attributes: [289.0, 111.0, 50.0, 5.8, 70.0, 60.0, 220.0, 0.0, 43.0, 126.0, 80.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 95.37139404413404%
+Output choice: 1, Confidence: 4.695144504457062%
+Sample Attributes: [231.0, 70.0, 110.0, 2.1, 71.0, 63.0, 155.0, 0.0, 27.5, 150.0, 78.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 92.42918983461989%
+Output choice: 1, Confidence: 7.188630347811925%
+Sample Attributes: [199.0, 85.0, 59.0, 3.4, 71.0, 69.0, 171.0, 1.0, 25.2, 136.0, 86.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 64.19464362641736%
+Output choice: 1, Confidence: 35.027161833939225%
+Sample Attributes: [228.0, 115.0, 61.0, 3.7, 71.0, 63.0, 244.0, 0.0, 43.2, 170.0, 92.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 77.27930449194149%
+Output choice: 0, Confidence: 23.006028303036782%
+Sample Attributes: [213.0, 203.0, 75.0, 2.8, 71.0, 63.0, 165.0, 0.0, 29.2, 150.0, 80.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 73.32453760243334%
+Output choice: 1, Confidence: 26.32119565880535%
+Sample Attributes: [204.0, 120.0, 44.0, 4.6, 72.0, 65.0, 167.0, 1.0, 27.8, 140.0, 72.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 79.3818347850189%
+Output choice: 1, Confidence: 20.344274724035824%
+Sample Attributes: [205.0, 83.0, 42.0, 4.9, 72.0, 61.0, 180.0, 0.0, 34.0, 170.0, 90.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 81.10114810143074%
+Output choice: 1, Confidence: 18.986910982314214%
+Sample Attributes: [213.0, 76.0, 40.0, 5.3, 72.0, 59.0, 137.0, 0.0, 27.7, 130.0, 60.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 92.70835855971757%
+Output choice: 1, Confidence: 6.878938919140341%
+Sample Attributes: [207.0, 71.0, 41.0, 5.0, 72.0, 70.0, 180.0, 1.0, 25.8, 138.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 75.6165982488566%
+Output choice: 1, Confidence: 23.44288872415116%
+Sample Attributes: [235.0, 106.0, 37.0, 6.4, 73.0, 65.0, 183.0, 1.0, 30.4, 134.0, 78.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 61.736707983130565%
+Output choice: 1, Confidence: 38.55065287759054%
+Sample Attributes: [237.0, 118.0, 45.0, 5.3, 73.0, 64.0, 174.0, 0.0, 29.9, 162.0, 75.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 86.74236586861909%
+Output choice: 1, Confidence: 12.421506893431838%
+Sample Attributes: [306.0, 92.0, 56.0, 5.5, 74.0, 69.0, 184.0, 1.0, 27.2, 140.0, 72.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 79.49059206543495%
+Output choice: 1, Confidence: 21.58207249434302%
+Sample Attributes: [223.0, 88.0, 42.0, 5.3, 74.0, 62.0, 165.0, 0.0, 30.2, 250.0, 100.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 96.1495022414686%
+Output choice: 0, Confidence: 3.5950022812006015%
+Sample Attributes: [296.0, 262.0, 60.0, 4.9, 74.0, 63.0, 183.0, 0.0, 32.4, 159.0, 99.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 87.2313711568712%
+Output choice: 1, Confidence: 12.108264210676436%
+Sample Attributes: [205.0, 79.0, 32.0, 6.4, 75.0, 69.0, 204.0, 1.0, 30.1, 136.0, 90.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 99.50977100905486%
+Output choice: 0, Confidence: 0.4875753522632219%
+Sample Attributes: [254.0, 342.0, 37.0, 6.9, 75.0, 68.0, 210.0, 1.0, 31.9, 151.0, 87.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 82.06373805748792%
+Output choice: 1, Confidence: 18.145686348233045%
+Sample Attributes: [159.0, 100.0, 54.0, 2.9, 76.0, 66.0, 188.0, 1.0, 30.3, 116.0, 53.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 90.79048053445271%
+Output choice: 1, Confidence: 9.080987403850767%
+Sample Attributes: [196.0, 82.0, 58.0, 3.4, 76.0, 65.0, 154.0, 1.0, 25.6, 158.0, 78.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 67.08238624527397%
+Output choice: 1, Confidence: 34.93722396381339%
+Sample Attributes: [173.0, 131.0, 69.0, 2.5, 76.0, 61.0, 102.0, 0.0, 19.3, 160.0, 60.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 86.92530564841273%
+Output choice: 1, Confidence: 12.299508085129148%
+Sample Attributes: [219.0, 112.0, 73.0, 3.0, 76.0, 64.0, 105.0, 1.0, 18.0, 125.0, 82.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 1
+Output choice: 0, Confidence: 70.88720233065679%
+Output choice: 1, Confidence: 29.070878498826996%
+Sample Attributes: [209.0, 113.0, 65.0, 3.2, 76.0, 60.0, 143.0, 0.0, 27.9, 156.0, 78.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 96.27277937383573%
+Output choice: 1, Confidence: 3.7177527360726144%
+Sample Attributes: [215.0, 80.0, 100.0, 2.2, 78.0, 65.0, 109.0, 1.0, 18.1, 170.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 93.4083128395032%
+Output choice: 1, Confidence: 6.261779763720994%
+Sample Attributes: [210.0, 81.0, 81.0, 2.6, 78.0, 66.0, 145.0, 1.0, 23.4, 110.0, 70.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 71.50278608315722%
+Output choice: 1, Confidence: 27.99981451803728%
+Sample Attributes: [224.0, 98.0, 44.0, 5.1, 78.0, 63.0, 160.0, 0.0, 28.3, 150.0, 81.0]
+[xxxxxxxINCORRECTxxxxxxx], Correct choice: 0
+Output choice: 1, Confidence: 67.4417632090999%
+Output choice: 0, Confidence: 32.0259348281361%
+Sample Attributes: [195.0, 171.0, 29.0, 6.7, 78.0, 66.0, 172.0, 1.0, 27.8, 130.0, 82.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 75.18631466480582%
+Output choice: 1, Confidence: 24.921565307607146%
+Sample Attributes: [235.0, 91.0, 37.0, 6.4, 79.0, 65.0, 134.0, 0.0, 22.3, 142.0, 70.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 86.78241219404896%
+Output choice: 0, Confidence: 12.723850756990348%
+Sample Attributes: [292.0, 235.0, 55.0, 5.3, 79.0, 70.0, 165.0, 1.0, 23.7, 170.0, 90.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 86.11766380708197%
+Output choice: 1, Confidence: 13.646683164305323%
+Sample Attributes: [157.0, 92.0, 47.0, 3.3, 80.0, 71.0, 212.0, 1.0, 29.6, 156.0, 88.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 51.55547984194394%
+Output choice: 0, Confidence: 46.945666126394045%
+Sample Attributes: [252.0, 161.0, 87.0, 2.9, 80.0, 62.0, 162.0, 0.0, 29.6, 160.0, 100.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 52.22717647624652%
+Output choice: 1, Confidence: 47.115826851377854%
+Sample Attributes: [271.0, 121.0, 40.0, 6.8, 81.0, 64.0, 158.0, 0.0, 27.1, 146.0, 76.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 75.49664812470733%
+Output choice: 1, Confidence: 24.24080044028065%
+Sample Attributes: [240.0, 88.0, 49.0, 4.9, 82.0, 63.0, 170.0, 0.0, 30.1, 180.0, 86.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 69.82094283417932%
+Output choice: 1, Confidence: 29.737510946237407%
+Sample Attributes: [255.0, 112.0, 34.0, 7.5, 82.0, 66.0, 163.0, 1.0, 26.3, 179.0, 89.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 64.73717864717355%
+Output choice: 1, Confidence: 33.93306696147755%
+Sample Attributes: [227.0, 105.0, 44.0, 5.2, 83.0, 59.0, 125.0, 0.0, 25.2, 150.0, 90.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 98.69003564240785%
+Output choice: 0, Confidence: 1.2615535937312472%
+Sample Attributes: [226.0, 279.0, 52.0, 4.3, 84.0, 60.0, 192.0, 0.0, 37.5, 144.0, 88.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 89.92802258777988%
+Output choice: 1, Confidence: 10.293938792840047%
+Sample Attributes: [301.0, 90.0, 118.0, 2.6, 89.0, 61.0, 115.0, 0.0, 21.7, 218.0, 90.0]
+[=======CORRECT=======], Correct choice: 1
+Output choice: 1, Confidence: 63.979611667066635%
+Output choice: 0, Confidence: 36.947377529021956%
+Sample Attributes: [232.0, 184.0, 114.0, 2.0, 91.0, 61.0, 127.0, 0.0, 24.0, 170.0, 82.0]
+[=======CORRECT=======], Correct choice: 0
+Output choice: 0, Confidence: 68.68346992301805%
+Output choice: 1, Confidence: 31.296587461500362%
+Sample Attributes: [165.0, 94.0, 69.0, 2.4, 92.0, 62.0, 217.0, 0.0, 39.7, 160.0, 82.0]
+Loss: 0.5, Correct: 85.8974358974359%
+Overall score: 1.197558476793592
