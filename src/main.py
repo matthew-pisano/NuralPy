@@ -76,12 +76,14 @@ if __name__ == "__main__":
         "epochs": 150,
         "displayUpdate": 1,
         "verbosity": 1,
-        "showPlots": False
+        "showPlots": True
     }
     # Run an example of the entire project
     # Use the backpropConfig dict to use a backpropagation network
     # and the geneticConfig dict to run the genetic algorithm network
     # trainingConfig contains parameters for actually training the network.  Variations in these values can
-    # greatly effect the results
+    # greatly effect the results!
+    # The verbosity value determines how much detail will be included in the output
+    # The showPlots value will show the python plots for the loss and accuracy curves of the network while it is training
     # The prune value determines the number of attributes to prune before execution
     testProject(backpropConfig, trainingConfig)

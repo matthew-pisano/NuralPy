@@ -16,6 +16,7 @@ class NeuralNet:
 		self.trainer.prime(self.population, self.topography, self.loss)
 
 	def train(self, sampleList, classList, epochs: int = 1000, displayUpdate: int = 10, verbosity: int = 0, showPlots: bool = False):
+		"""Trains the neural network with the given parameters along with progress reports for logging"""
 		# displayUpdate indicates after how many epochs a progress update will be displayed,
 		# showPlots tells whether to show the loss and accuracy graphs
 		self.trainer.train(sampleList, classList, epochs, displayUpdate, verbosity, showPlots)
@@ -33,14 +34,16 @@ class NeuralNet:
 		return output
 
 	def loss(self, samples, memberId=-1, verbosity=0, displaySamples=None):
-		"""Calculates the loss of the network over the given sample set and may output useful logging information"""
+		"""Calculates the loss of the network over the given sample set and will output useful logging information"""
 		# memberId is the id of the individual to test, only useful for genetic algorithms,
 		# displaySamples is the numpy array to show during testing.  It is useful to have it
 		# be the original data set before any normalization for better viewing
+		# samples[0] is a list of samples with their attributes, samples[1] is a list of the corresponding classes
 		if memberId == -1:
+			# For genetic algorithm, set fittnesses of individuals
 			self.trainer.setAllFitness(samples)
 			memberId = self.trainer.selection(1)[0]
-		# Get output of network
+		# Get output of network for all samples
 		output = self.test(samples[0], memberId)
 		correct = -1
 		# Verbose logging
@@ -55,8 +58,8 @@ class NeuralNet:
 				correctChoice = np.where(samples[1][i] == max(samples[1][i]))[0][0]
 				correctGuess = 1 if outChoice == correctChoice else 0
 				if verbosity > 1:
-					# Green color: \033[32m, Yellow Color: \033[93m, Default: \033[38m
-					# Print colored text indicating a correct choice or not
+					# For linux Green color: \033[32m, Yellow Color: \033[93m, Default: \033[38m
+					# Print text indicating a correct choice or not
 					print(("[=======CORRECT=======]" if correctGuess == 1 else "[xxxxxxxINCORRECTxxxxxxx]") +
 						  ", Correct choice: " + str(correctChoice))
 					# Print out 5 most highly rated choices with their confidence
