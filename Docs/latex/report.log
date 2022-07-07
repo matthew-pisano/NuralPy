@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.19)  7 MAY 2022 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.13)  6 JUL 2022 21:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex
-(/home/matthew/Documents/pgrm/NeuralPy/Docs/latex/report.tex
+**/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/latex/report.tex
+(/home/matthew/OneDrive/Documents/pgrm/NeuralPy/Docs/latex/report.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24> (/usr/share/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2022-04-10> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -170,7 +170,7 @@ Package datetime2 Warning: Region `en-GB' has ignored
  on input line 13.
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box50
 ) (./report.aux)
@@ -305,15 +305,15 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: E94FE3C438E00DEC06FCD1A9FD54EFDE;2471.
  ) 
 Here is how much of TeX's memory you used:
- 11345 strings out of 478276
- 198981 string characters out of 5853013
- 493577 words of memory out of 5000000
- 29383 multiletter control sequences out of 15000+600000
+ 11367 strings out of 478238
+ 199729 string characters out of 5850456
+ 494543 words of memory out of 5000000
+ 29436 multiletter control sequences out of 15000+600000
  474774 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,63p,560b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,63p,569b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (12 pages, 295929 bytes).
+Output written on report.pdf (12 pages, 295937 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams
