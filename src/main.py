@@ -1,89 +1,36 @@
-import os
-import time
-import DecisionTree
-from NeuralNet import NeuralNet
-from train import *
+import numpy as np
+from keras.datasets import mnist
 
-
-def prepareData(fileName, normThreshDict, prune=0):
-    """Import and trim data from CSV file"""
-    # Trim least useful attribute
-    DecisionTree.trimAttribDict(fileName, normThreshDict, prune)
-    # Import total attribute and class data from CSV
-    return Utils.importCSV(fileName, normThreshDict, "Diabetes")
-
-
-def testProject(netConfig, trainingConfig):
-    """Runs any supported configuration of the entire project"""
-    # The modified diabetes file data
-    fileName = os.path.dirname(os.path.realpath(__file__))+"/PrunedDiabetesDataSet.csv"
-    # Dictionary containing the maximum and threshold values for each attribute
-    # The threshold attribute decides weather an attribute is considered true or not
-    normThreshDict = {
-        "cholesterol": [500, 200],
-        "glucose": [400, 140],
-        "hdl_chol": [130, 60],
-        "chol_hd_ratio": [30, 2],
-        "age": [100, 40],
-        "height": [80, 67],
-        "weight": [350, 175],
-        "gender": [1, 0.5],
-        "bmi": [60, 30],
-        "systolic_bp": [270, 120],
-        "diastolic_bp": [150, 80]
-    }
-    # Prepare data from CSV
-    trainSet, testSet = prepareData(fileName, normThreshDict, netConfig["prune"])
-    # The number of nodes in each layer of the neural network
-    netShape = [len(normThreshDict), 2]
-    # Trainer passed into NeuralNet object determines what kind of algorithm will be used to train it
-    if netConfig["type"] == "backprop":
-        # For backpropogation
-        net = NeuralNet(netShape, Backpropogator(netConfig["learningRate"]))
-    else:
-        # For the genetic algorithm
-        net = NeuralNet(netShape, Genetic(netConfig["popSize"], netConfig["crossoverRate"], netConfig["mutationRate"]))
-    t = time.time()
-    # Train the neural network
-    net.train(np.array(trainSet[0]), np.array(trainSet[1]), **trainingConfig)
-    timeDiff = time.time() - t
-    print("Trained after " + str(timeDiff) + "s")
-    print("================================\n\n==============================")
-    # Calculate loss of the trained neural network
-    sampleSet = np.c_[np.array(testSet[0]), np.ones((np.array(testSet[0]).shape[0]))]
-    loss = net.loss([sampleSet, np.array(testSet[1])], verbosity=3,
-                    displaySamples=Utils.importCSV(fileName, normThreshDict, "Diabetes", normalize=False)[1])
-    # Print out results
-    print("Loss: " + str(loss[0]) + ", Correct: " + str(loss[1] * 100) + "%")
-    print("Overall score: " + str(loss[1] / timeDiff))
+from network import Network, Layer
+from utils import ReLU, Sigmoid, CrossEntropy
 
 
 if __name__ == "__main__":
-    backpropConfig = {
-        "prune": 0,
-        "type": "backprop",
-        "learningRate": 0.18
 
-    }
-    geneticConfig = {
-        "prune": 0,
-        "type": "genetic",
-        "popSize": 6,
-        "crossoverRate": 0.5,
-        "mutationRate": 0.01
-    }
-    trainingConfig = {
-        "epochs": 150,
-        "displayUpdate": 1,
-        "verbosity": 1,
-        "showPlots": True
-    }
-    # Run an example of the entire project
-    # Use the backpropConfig dict to use a backpropagation network
-    # and the geneticConfig dict to run the genetic algorithm network
-    # trainingConfig contains parameters for actually training the network.  Variations in these values can
-    # greatly effect the results!
-    # The verbosity value determines how much detail will be included in the output
-    # The showPlots value will show the python plots for the loss and accuracy curves of the network while it is training
-    # The prune value determines the number of attributes to prune before execution
-    testProject(backpropConfig, trainingConfig)
+    # Load MNIST from keras
+    (x_train, y_train_tmp), (x_test, y_test_tmp) = mnist.load_data()
+    # Expand dimension of labels to 10
+    y_train = np.zeros((y_train_tmp.shape[0], 10))
+    y_test = np.zeros((y_test_tmp.shape[0], 10))
+    for i in range(len(y_train_tmp)):
+        y_train[i][y_train_tmp[i]] = 1
+    for i in range(len(y_test_tmp)):
+        y_test[i][y_test_tmp[i]] = 1
+
+    # Normalize image data
+    x_train = x_train.reshape(x_train.shape[0], 784)/255
+    x_test = x_test.reshape(x_test.shape[0], 784)/255
+
+    # Create layers and network
+    topology = [784, 32, 10]
+    neurotransmitters = 3
+    layers = [Layer((topology[i], topology[i+1]), ReLU(), neurotransmitters=neurotransmitters) for i in range(len(topology)-2)]
+    layers.append(Layer((topology[-2], topology[-1]), Sigmoid(), neurotransmitters=neurotransmitters))
+    network = Network(layers, CrossEntropy())
+
+    # Train network
+    print(network.train(x_train, y_train, 10, learning_rate=3e-2))
+
+    # Get sample output and print
+    output = network.forward(np.atleast_2d(x_test[0]).T)
+    print("Output:", output, ", Target:", y_test[0])

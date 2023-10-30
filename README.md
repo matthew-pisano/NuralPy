@@ -37,7 +37,7 @@ Running the main project file is as simple as:
 
 > `python main.py`
 
-when in the src directory of the project.
+when in the `src/` directory of the project.
 By default, this will run the project in the exact configuration that was used in the presentation slides.
 
 Modifying any of the parameters in the dictionaries in the main method will result in different execution behavior.  After each successful execution, the program will output the results of the testing, such as which guesses were correct or incorrect.

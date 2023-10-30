@@ -1,0 +1,6 @@
+numpy==1.26.1
+matplotlib~=3.8.0
+
+# For loading MNIST data
+keras~=2.14.0
+tensorflow
